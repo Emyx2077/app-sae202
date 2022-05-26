@@ -1,4 +1,4 @@
-<?php require'head.php';
+<?php require 'lib/lib.inc.php';
 
 $nomTeam =$_POST['nomTeam'];
 $prenom=$_POST['prenom'];
@@ -7,8 +7,8 @@ $password=$_POST['password'];
 
 $co=connexion();
 
-$req1='INSERT INTO team (teamNom, teamPlayerId, teamLvl)
-        VALUES ("'.$nomTeam.'", "null", "0")';
+$req1='INSERT INTO team (teamNom, teamLvl)
+        VALUES ("'.$nomTeam.'", "0")';
 
 try {
     $resultat=$co->query($req1); // exécuter la requête
@@ -42,5 +42,7 @@ try {
     print "Erreur : ".$e->getMessage().'<br />';
     die();
 }
+
+$_SESSION['teamId']= $teamId;
 
 header('location:board.php');
