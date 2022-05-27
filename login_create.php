@@ -1,7 +1,7 @@
 <?php require 'lib/lib.inc.php';
 
-$prenom=$_POST['prenom'];
-$nom=$_POST['nom'];
+$prenom=sanitize($_POST['prenom']);
+$nom=sanitize($_POST['nom']);
 $passwordInput=$_POST['password'];
 
 $password=password_hash($passwordInput, PASSWORD_BCRYPT);
