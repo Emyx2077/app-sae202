@@ -24,8 +24,29 @@ $teamNomCount=$resultat->rowCount();
 
 
 
-//generate pin code for joining team
-$teamCode = "h2343";
+//generate pin code for joining team (and checking if it's unique)
+$isunique=0;
+while ($isunique==0){
+
+    $teamCode = generatePinCode(4);
+
+    $req='SELECT teamCode FROM teams WHERE teamCode="'.$teamCode.'";';
+
+    try {
+        $resultat=$co->query($req); // exécuter la requête
+    } catch (PDOException $e) {
+        print "Erreur : ".$e->getMessage().'<br />';
+        die();
+    }
+
+    $resultat = $resultat->rowCount();
+
+    if($resultat==0){
+        $isunique=1;
+    }
+}
+
+
 
 
 //create team

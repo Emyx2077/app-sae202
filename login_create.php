@@ -35,5 +35,6 @@ $userId=$resultat2->fetch(PDO::FETCH_ASSOC);
 $userId=implode("", $userId);
 
 $_SESSION['userId']= $userId;
+$_SESSION['userPrenom']= $prenom;
 
 header('location:board.php');

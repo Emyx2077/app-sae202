@@ -78,3 +78,13 @@ function afficherTeams($mabd) {
     } else {
         echo '<p>Pas de résultat !</p>'; }
 }
+
+
+function generatePinCode($chars){
+    $pin="";
+    while ($chars!=0){
+        $pin .=rand(0,9);
+        $chars--;
+    }
+    return $pin;
+}
