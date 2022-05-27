@@ -2,7 +2,9 @@
 
 $prenom=$_POST['prenom'];
 $nom=$_POST['nom'];
-$password=$_POST['password'];
+$passwordInput=$_POST['password'];
+
+$password=password_hash($passwordInput, PASSWORD_BCRYPT);
 
 $co=connexion();
 
