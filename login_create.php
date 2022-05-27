@@ -37,5 +37,6 @@ $userId=implode("", $userId);
 //loading some things in session
 $_SESSION['userId']= $userId;
 $_SESSION['userPrenom']= $prenom;
+$_SESSION['userNom']= $nom;
 
 header('location:board.php');

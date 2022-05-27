@@ -28,6 +28,7 @@ if ($ligne>0) {
     if (password_verify($password, $resultat['userPassword'])) {
         $_SESSION['userId']=$resultat['userId'];
         $_SESSION['userPrenom']=$resultat['userPrenom'];
+        $_SESSION['userNom']= $resultat['userNom'];
         $_SESSION['teamCode']= $resultat['teamCode'];
         $_SESSION['teamNom']= $resultat['teamNom'];
         header('location:board.php');
