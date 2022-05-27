@@ -21,6 +21,7 @@ try {
 
 $ligne=$resultat->rowCount();
 
+
 //if password true login, else error
 if ($ligne>0) {
     $resultat=$resultat->fetch(PDO::FETCH_ASSOC);

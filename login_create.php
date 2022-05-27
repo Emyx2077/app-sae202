@@ -34,6 +34,7 @@ try {
 $userId=$resultat2->fetch(PDO::FETCH_ASSOC);
 $userId=implode("", $userId);
 
+//loading some things in session
 $_SESSION['userId']= $userId;
 $_SESSION['userPrenom']= $prenom;
 
