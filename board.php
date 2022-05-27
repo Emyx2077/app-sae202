@@ -2,4 +2,9 @@
 require'head.php';
 
 
-echo $_SESSION['teamId'];
+var_dump($_SESSION);
+
+?>
+
+<a href="team.php">create team</a><br>
+<a href="deconnexion.php">deconnexion</a>

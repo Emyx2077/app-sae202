@@ -1,25 +1,26 @@
 <?php require 'lib/lib.inc.php';
 
-$nomTeam =$_POST['nomTeam'];
 $prenom=$_POST['prenom'];
 $nom=$_POST['nom'];
 $password=$_POST['password'];
 
 $co=connexion();
 
-$req1='INSERT INTO team (teamNom, teamLvl)
-        VALUES ("'.$nomTeam.'", "0")';
+
+//create new user
+$req='INSERT INTO users (userPrenom, userNom, userTeamId, userPassword)
+        VALUES ("'.$prenom.'", "'.$nom.'", "0", "'.$password.'");';
 
 try {
-    $resultat=$co->query($req1); // exécuter la requête
+    $resultat=$co->query($req); // exécuter la requête
 } catch (PDOException $e) {
     print "Erreur : ".$e->getMessage().'<br />';
     die();
 }
 
 
-
-$req2='SELECT teamId FROM team WHERE teamNom="'.$nomTeam.'";';
+//get freshly created user id from DB
+$req2='SELECT userId FROM users WHERE userPrenom="'.$prenom.'" AND userNom="'.$nom.'";';
 
 try {
     $resultat2=$co->query($req2); // exécuter la requête
@@ -28,21 +29,9 @@ try {
     die();
 }
 
-$teamId=$resultat2->fetch(PDO::FETCH_ASSOC);
-$teamId = implode("", $teamId);
+$userId=$resultat2->fetch(PDO::FETCH_ASSOC);
+$userId=implode("", $userId);
 
-
-
-$req3='INSERT INTO user (userNom, userPrenom, userTeamId, userPassword)
-        VALUES ("'.$nom.'", "'.$prenom.'", "'.$teamId.'", "'.$password.'")';
-
-try {
-    $resultat3=$co->query($req3); // exécuter la requête
-} catch (PDOException $e) {
-    print "Erreur : ".$e->getMessage().'<br />';
-    die();
-}
-
-$_SESSION['teamId']= $teamId;
+$_SESSION['userId']= $userId;
 
 header('location:board.php');
