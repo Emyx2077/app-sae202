@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 27, 2022 at 04:36 PM
+-- Generation Time: May 27, 2022 at 07:22 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.26
 
@@ -18,63 +18,51 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sae202`
+-- Database: `test2`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `team`
+-- Table structure for table `teams`
 --
 
-CREATE TABLE `team` (
-  `teamId` int(11) NOT NULL,
+CREATE TABLE `teams` (
+  `teamId` int(9) NOT NULL,
   `teamNom` varchar(99) NOT NULL,
-  `teamLvl` int(10) NOT NULL
+  `teamLvl` int(9) NOT NULL,
+  `teamNbPlayers` int(9) NOT NULL,
+  `teamCode` varchar(99) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `team`
---
-
-INSERT INTO `team` (`teamId`, `teamNom`, `teamLvl`) VALUES
-(16, 'Test', 0);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `user` (
-  `userId` int(3) NOT NULL,
-  `userNom` varchar(99) NOT NULL,
+CREATE TABLE `users` (
+  `userId` int(9) NOT NULL,
   `userPrenom` varchar(99) NOT NULL,
-  `userTeamId` int(3) NOT NULL,
-  `userPassword` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`userId`, `userNom`, `userPrenom`, `userTeamId`, `userPassword`) VALUES
-(5, 'onyme', 'Test', 14, '1234');
+  `userNom` varchar(99) NOT NULL,
+  `userTeamId` int(11) NOT NULL,
+  `userPassword` varchar(99) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `team`
+-- Indexes for table `teams`
 --
-ALTER TABLE `team`
+ALTER TABLE `teams`
   ADD PRIMARY KEY (`teamId`);
 
 --
--- Indexes for table `user`
+-- Indexes for table `users`
 --
-ALTER TABLE `user`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`userId`);
 
 --
@@ -82,16 +70,16 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `team`
+-- AUTO_INCREMENT for table `teams`
 --
-ALTER TABLE `team`
-  MODIFY `teamId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+ALTER TABLE `teams`
+  MODIFY `teamId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `user`
-  MODIFY `userId` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `users`
+  MODIFY `userId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
