@@ -22,6 +22,10 @@ function connexion(){
     return $mabd;
 }
 
+function deconnexion(&$mabd){
+    $mabd = null;
+}
+
 function sanitize($word){
     $wordLower = mb_strtolower($word);
     $wordSanitize = filter_var($wordLower, FILTER_SANITIZE_STRING);

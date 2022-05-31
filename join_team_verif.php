@@ -75,6 +75,7 @@ try {
     die();
 }
 
+deconnexion($co);
 
 //on renvoit sur le board
 header('location:board.php');

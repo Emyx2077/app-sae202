@@ -21,6 +21,8 @@ try {
 
 $ligne=$resultat->rowCount();
 
+deconnexion($co);
+
 
 //if password true login, else error
 if ($ligne>0) {

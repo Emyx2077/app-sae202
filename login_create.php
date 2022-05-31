@@ -39,4 +39,6 @@ $_SESSION['userId']= $userId;
 $_SESSION['userPrenom']= $prenom;
 $_SESSION['userNom']= $nom;
 
+deconnexion($co);
+
 header('location:board.php');
