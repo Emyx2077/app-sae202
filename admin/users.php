@@ -1,4 +1,4 @@
-<?php require '../lib/lib.inc.php';
+<?php require'head.php';
 
 $co = connexion();
 

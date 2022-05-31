@@ -1,5 +1,7 @@
-<?php require '../lib/lib.inc.php';
+<?php require'head.php';
 
 $co = connexion();
 
-afficherTeams($co);
+$req ="SELECT * FROM teams";
+
+afficherTeams($co, $req);

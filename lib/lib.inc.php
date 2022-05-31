@@ -58,8 +58,7 @@ function afficherUsers($mabd) {
         echo '<p>Pas de résultat !</p>'; }
 }
 
-function afficherTeams($mabd) {
-    $req ="SELECT * FROM teams";
+/*function afficherTeams($mabd, $req) {
 
     try {
         $resultat = $mabd->query($req);
@@ -79,6 +78,33 @@ function afficherTeams($mabd) {
             echo '<li>'.$ligne['teamCode'].'</li>';
             echo '</ul>';
         }
+    } else {
+        echo '<p>Pas de résultat !</p>'; }
+}*/
+
+function afficherTeams($mabd, $req) {
+
+    try {
+        $resultat = $mabd->query($req);
+    } catch (PDOException $e) {
+        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
+        die();
+    }
+
+    $lignes_resultat = $resultat->rowCount();
+    if ($lignes_resultat>0) {
+        echo '<table>'."\n";
+        echo '<thead><th>Team id</th><th>Team Nom</th><th>Team lvl</th><th>Team nb players</th><th>team code</th></thead>';
+        while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
+            echo '<tr>';
+            echo '<td>'.$ligne['teamId'].'</td>';
+            echo '<td>'.$ligne['teamNom'].'</td>';
+            echo '<td>'.$ligne['teamLvl'].'</td>';
+            echo '<td>'.$ligne['teamNbPlayers'].'</td>';
+            echo '<td>'.$ligne['teamCode'].'</td>';
+            echo '</tr>';
+        }
+        echo '</table>'."\n";
     } else {
         echo '<p>Pas de résultat !</p>'; }
 }

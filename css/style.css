@@ -1,0 +1,19 @@
+* {
+    list-style: none;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    margin: 15px;
+}
+
+table, th, td{
+    border: solid 1px black;
+}
+
+.erreur{
+    color: red;
+}

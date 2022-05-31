@@ -1,6 +1,14 @@
 <?php require 'head.php'; ?>
 
 <div id="contenu">
+    <?php
+    if (!empty($_SESSION['erreur'])) {
+        echo '<p class="erreur">'.$_SESSION['erreur'].'</p>';
+        unset ($_SESSION['erreur']);
+    }
+    ?>
+
+
     <h1>Créer ton compte</h1>
 
     <form action="login_create.php" method="post">
