@@ -87,6 +87,8 @@ try {
     die();
 }
 
+//
+
 deconnexion($co);
 
 header('location:board.php');

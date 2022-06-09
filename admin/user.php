@@ -2,5 +2,8 @@
 
 $co = connexion();
 
-$req ="SELECT * FROM users";
+$id = $_GET['id'];
+
+$req = "SELECT * FROM users WHERE userId=".$id.";";
+
 afficherUsers($co, $req);

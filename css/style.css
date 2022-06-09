@@ -17,3 +17,8 @@ table, th, td{
 .erreur{
     color: red;
 }
+
+.playersDiv{
+    border: 2px solid black;
+    margin: 10px;
+}
