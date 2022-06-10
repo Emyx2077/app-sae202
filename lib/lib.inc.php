@@ -118,3 +118,30 @@ function generatePinCode($chars){
     }
     return $pin;
 }
+
+function afficherKeys($mabd, $req) {
+
+    try {
+        $resultat = $mabd->query($req);
+    } catch (PDOException $e) {
+        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
+        die();
+    }
+
+    $hashKey = null;
+
+    $lignes_resultat = $resultat->rowCount();
+    if ($lignes_resultat>0) {
+        while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
+            $hashKey .= $ligne['hashKey'];
+            echo '<ul>';
+            echo '<li>'.$ligne['hashId'].'</li>';
+            echo '<li>'.$ligne['hashKey'].'</li>';
+            echo '<li>'.$ligne['hashIndice'].'</li>';
+            echo '<li>'.$ligne['hashHint'].'</li>';
+            echo '</ul>';
+        }
+        return $hashKey;
+    } else {
+        echo '<p>Pas de résultat !</p>'; }
+}
