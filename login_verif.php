@@ -8,9 +8,11 @@ $co=connexion();
 
 //select data from user associated with input (and load team table too, for loading session)
 $req='SELECT * FROM users 
-        INNER JOIN teams
+        LEFT JOIN teams
         ON teams.teamId=users.userTeamId
         WHERE userPrenom="'.$prenom.'" AND userNom="'.$nom.'";';
+
+echo $req;
 
 try {
     $resultat=$co->query($req); // exécuter la requête

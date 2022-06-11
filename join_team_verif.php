@@ -27,26 +27,33 @@ if ($ligne == 0){
 
 $resultat = $resultat->fetch(PDO::FETCH_ASSOC);
 
-//actualiser nombre player dans l'ancienne team
-$teamNbPlayers = $resultat['teamNbPlayers'] - 1;
+/*//actualiser nombre player dans l'ancienne team
+echo $resultat['teamNbPlayers'];
 
-//on check si la team est  a 0, si oui on delete, mais seulement si le player avait déjà une team
-if($teamNbPlayers > 0){
-    $req2='UPDATE teams SET teamNbPlayers ="'.$teamNbPlayers.'" WHERE teamCode="'.$_SESSION['teamCode'].'"';
-} else {
-    if(!empty($_SESSION['teamCode'])){
-    $req2='DELETE FROM teams WHERE teamCode="'.$_SESSION['teamCode'].'"';
+$teamNbPlayers = $resultat['teamNbPlayers'] -1;
+
+
+//check si l'user avait déjà une team
+if (!empty($_SESSION['teamCode'])) {
+//on check si la team est n'est pas 0 joueurs, si non, on update le nombre
+    //sinon si elle est vide on delete la team
+    if ($teamNbPlayers > 0) {
+        $req2 = 'UPDATE teams SET teamNbPlayers = teamNbPlayers - 1 WHERE teamCode="' . $_SESSION['teamCode'] . '"';
+    } else {
+            //$req2 = 'DELETE FROM teams WHERE teamCode="' . $_SESSION['teamCode'] . '"';
+            echo 'a';
     }
-}
 
-try {
-    $resultat2=$co->query($req2); // exécuter la requête
-} catch (PDOException $e) {
-    print "Erreur : ".$e->getMessage().'<br />';
-    die();
-}
+    try {
+        $resultat2 = $co->query($req2); // exécuter la requête
+    } catch (PDOException $e) {
+        print "Erreur : " . $e->getMessage() . '<br />';
+        die();
+    }
 
-$resultat2 = $resultat2->fetch(PDO::FETCH_ASSOC);
+    $resultat2 = $resultat2->fetch(PDO::FETCH_ASSOC);
+    echo $resultat2;
+}*/
 
 
 //on actualise les values de la team dans la session
@@ -78,7 +85,7 @@ try {
 deconnexion($co);
 
 //on renvoit sur le board
-header('location:board.php');
+//header('location:board.php');
 
 
 
