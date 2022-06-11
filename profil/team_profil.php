@@ -6,7 +6,7 @@
         unset ($_SESSION['erreur']);
     }
 
-//afficher si ils existent les bouts de clé déjà présents
+//afficher s'ils existent les bouts de clé déjà présents
 
 $teamCode = $_SESSION['teamCode'];
 $co=connexion();
@@ -28,7 +28,7 @@ if ($lignes_resultat>0) {
         echo $ligne['hashKey'].'<br>';
     }
 } else {
-    echo '<p>Pas de résultat !</p>'; }
+    echo '<p>Aucune clé découverte pour le moment</p>'; }
 
 deconnexion($co);
 
@@ -36,7 +36,7 @@ deconnexion($co);
 //valider une nouvelle key
 ?>
 <form action="is_valid.php" method="post">
-    Bout de code obtenu lors de l'atelier <input type="text" name="indice" /><br>
+    Bout de code obtenu lors de l'atelier <input type="text" name="indice" required /><br>
     <input type="submit" value="Envoyer">
 </form>
 
@@ -44,7 +44,7 @@ deconnexion($co);
 <!--si pas de photo de team
 uploader la photo de groupe de la team-->
 <form action="photo.php" method="post" enctype="multipart/form-data">
-    La photo de votre groupe <input type="file" name="pic" /><br>
+    La photo de votre groupe <input type="file" name="pic" required/><br>
     <input type="submit" value="Envoyer">
 </form>
 
