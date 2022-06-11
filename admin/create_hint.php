@@ -12,9 +12,9 @@ echo '<form action="create_hint_valider.php" method="POST">';
     for ($i = 0; $i < $size; $i++ ){
         echo 'bout de key : "'.$splitSentence[$i].'"<br>';
         echo 'Endroit<br>';
-        echo '<input type="text" name="location'.$i.'" /><br>';
+        echo '<input type="text" name="location'.$i.'" required/><br>';
         echo 'indice (clé donné a la fin d\'une activité)<br>';
-        echo '<input type="text" name="hint'.$i.'" /><br><br>';
+        echo '<input type="text" name="hint'.$i.'" required/><br><br>';
     }
 
     echo '<input type="submit" value="Envoyer">';

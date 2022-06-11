@@ -11,7 +11,7 @@
     <h1>Connexion</h1>
 
     <form action="team_create.php" method="post">
-        Le nom de ta team : <input type="text" name="teamNom" /><br>
+        Le nom de ta team : <input type="text" name="teamNom" required/><br>
         <input type="submit" value="Envoyer">
     </form>
 
