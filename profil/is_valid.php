@@ -17,7 +17,7 @@ try {
     if ($lignes_resultat>0){
         $_SESSION['erreur'] = "l'indice existe déjà";
         deconnexion($co);
-        header('location:decodehub.php');
+        header('location:team_profil.php');
     }
 } catch (PDOException $e) {
     print "Erreur : ".$e->getMessage().'<br />';
@@ -50,10 +50,10 @@ if ($resultat['hashHint'] == $hint){
         die();
     }
     deconnexion($co);
-    header('location:decodehub.php');
+    header('location:team_profil.php');
 
 } else {
     $_SESSION['erreur'] = "indice invalide";
     deconnexion($co);
-    header('location:decodehub.php');
+    header('location:team_profil.php');
 }

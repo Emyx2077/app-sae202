@@ -21,3 +21,6 @@ if (empty($_SESSION['teamCode'])){
 
 <br><a href="deconnexion.php">deconnexion</a>
 
+<hr>
+<a href="profil/team_profil.php">profil de la team</a>
+
