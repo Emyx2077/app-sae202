@@ -145,3 +145,23 @@ function afficherKeys($mabd, $req) {
     } else {
         echo '<p>Pas de résultat !</p>'; }
 }
+
+function showUploads($mabd, $req) {
+
+    try {
+        $resultat = $mabd->query($req);
+    } catch (PDOException $e) {
+        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
+        die();
+    }
+
+    $lignes_resultat = $resultat->rowCount();
+    if ($lignes_resultat>0) {
+        while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
+            echo '<h3>'.$ligne['teamNom'].'</h3><br>';
+            echo 'activité : '.$ligne['uploadNom'].'<br>';
+            echo '<img src="../'.$ligne['uploadImg'].'"><br>';
+        }
+    } else {
+        echo '<p>Pas de résultat !</p>'; }
+}

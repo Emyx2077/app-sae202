@@ -29,8 +29,7 @@ if(is_uploaded_file($_FILES["pic"]["tmp_name"])) {
 //req pour ajouter a la table
 $path = "/profil/img/".$newImg;
 
-$req = 'INSERT INTO upload (uploadNom, uploadTeamId, uploadImg) VALUES ("groupPic", "'.$_SESSION['teamCode'].'", "'.$path.'");';
-echo $req;
+$req = 'INSERT INTO upload (uploadNom, uploadTeamCode, uploadImg) VALUES ("groupPic", "'.$_SESSION['teamCode'].'", "'.$path.'");';
 
 try {
     $resultat=$co->query($req); // exécuter la requête
@@ -40,3 +39,5 @@ try {
 }
 
 deconnexion($co);
+
+header('location:team_profil.php');
