@@ -10,4 +10,4 @@
 <a href="teams.php">teams</a>
 <a href="upload.php">global upload</a>
 <br>
-<a href="key.php">gestion key</a>
+<a href="keys.php">gestion key</a>
