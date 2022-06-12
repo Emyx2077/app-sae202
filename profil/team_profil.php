@@ -32,8 +32,6 @@ echo '<div class="d-flex justify-content-center flex-wrap">
         } else {
             echo '<p>Aucune clé découverte pour le moment</p>'; }
 
-        deconnexion($co);
-
         //display si l'indice existe déjà
 
         if (!empty($_SESSION['erreur'])) {
@@ -56,10 +54,33 @@ echo '<div class="d-flex justify-content-center flex-wrap">
 
         <?php
         //si une photo a déjà été up on la montre, sinon on affiche le form pour en up une
-        if (!empty($_SESSION['picPath'])){
+
+        $req = 'SELECT uploadImg FROM upload WHERE uploadTeamCode = "'.$_SESSION['teamCode'].'";';
+
+        try {
+            $resultat=$co->query($req); // exécuter la requête
+            $lignes_resultat = $resultat->rowCount();
+        } catch (PDOException $e) {
+            print "Erreur : ".$e->getMessage().'<br />';
+            die();
+        }
+
+        $lignes_resultat = $resultat->rowCount();
+
+        $resultat=$resultat->fetch(PDO::FETCH_ASSOC);
+
+        deconnexion($co);
+
+        if ($lignes_resultat>0) {
             echo '<h3>Votre photo d\'équipe</h3><br>';
-            echo '<a href="img/'.$_SESSION['picPath'].'"><img class="img-thumbnail" style="width :200px" src="img/'.$_SESSION['picPath'].'"></a>';
+            echo '<a href="img/'.$resultat['uploadImg'].'"><img class="img-thumbnail" style="width :200px" src="img/'.$resultat['uploadImg'].'"></a>';
         } else {
+
+
+            if (!empty($_SESSION['erreurImg'])) {
+                echo '<p class="text-danger">'.$_SESSION['erreurImg'].'</p>';
+                unset ($_SESSION['erreurImg']);
+            }
             ?>
 
         <form action="photo.php" method="post" enctype="multipart/form-data">

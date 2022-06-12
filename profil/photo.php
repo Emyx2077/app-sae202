@@ -9,8 +9,9 @@ $imageType=$_FILES["pic"]["type"];
 if ( ($imageType != "image/png") &&
     ($imageType != "image/jpg") &&
     ($imageType != "image/jpeg") ) {
-    echo '<p>Désolé, le type d\'image n\'est pas reconnu !';
-    echo 'Seuls les formats PNG et JPEG sont autorisés.</p>'."\n";
+
+    $_SESSION['erreurImg'] = "Format image invalide";
+    header('location:team_profil.php');
     die();
 }
 
