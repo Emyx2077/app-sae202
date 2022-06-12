@@ -37,7 +37,7 @@ if ($ligne>0) {
         $_SESSION['teamNom']= $resultat['teamNom'];
         header('location:board.php');
     } else {
-        $_SESSION['erreur'] = "utilisateur inconnu";
+        $_SESSION['erreur'] = "Utilisateur inconnu";
         header('location:index.php');
     }
 } else {

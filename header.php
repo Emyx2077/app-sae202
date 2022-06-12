@@ -2,11 +2,10 @@
 
 
 
-echo '<div class="dropdown m-2 fixed-top nav justify-content-end" style="z-index: 5; right: 20px;">';
-
-echo '<a class="btn btn-primary mr-2" href="/sae202/app-sae202/board.php" role="button">Accueil</a>';
+echo '<div class="dropdown m-2 fixed-top" style="z-index: 5; right: 20px;">';
 
 if (!empty($_SESSION['userId'])){
+    echo '<a class="btn btn-primary mr-2" href="/sae202/app-sae202/board.php" role="button">Accueil</a>';
     echo '<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Bienvenue '. $_SESSION['userPrenom'].'</button><br>';
 }
 
