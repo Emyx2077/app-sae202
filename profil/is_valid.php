@@ -15,7 +15,7 @@ try {
     $resultat=$co->query($req); // exécuter la requête
     $lignes_resultat = $resultat->rowCount();
     if ($lignes_resultat>0){
-        $_SESSION['erreur'] = "l'indice existe déjà";
+        $_SESSION['erreur'] = "L'indice existe déjà";
         deconnexion($co);
         header('location:team_profil.php');
     }
@@ -26,7 +26,7 @@ try {
 
 
 
-
+//on reccupere l'indice
 $req='SELECT * FROM hash WHERE hashHint ="'.$hint.'";';
 
 try {
@@ -37,12 +37,14 @@ try {
     die();
 }
 
-
+//on log le fait que tel team a valider tel indice
 if ($resultat['hashHint'] == $hint){
     $hashId=$resultat['hashId'];
 
     $req = 'INSERT INTO hashAccess (teamCode, teamNom, hashId) VALUES ("'.
         $teamCode.'", "'.$teamNom.'", "'.$hashId.'");';
+
+    echo $req;
     try {
         $resultat=$co->query($req); // exécuter la requête
     } catch (PDOException $e) {
@@ -53,7 +55,7 @@ if ($resultat['hashHint'] == $hint){
     header('location:team_profil.php');
 
 } else {
-    $_SESSION['erreur'] = "indice invalide";
+    $_SESSION['erreur'] = "Indice invalide";
     deconnexion($co);
     header('location:team_profil.php');
 }

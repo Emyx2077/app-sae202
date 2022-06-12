@@ -22,7 +22,7 @@ $ligne=$resultat->rowCount();
 if ($ligne == 0){
     $_SESSION['erreur'] = "Le code de la team est invalide";
     header('location:join_team.php');
-
+    die();
 }
 
 $resultat = $resultat->fetch(PDO::FETCH_ASSOC);
@@ -85,7 +85,7 @@ try {
 deconnexion($co);
 
 //on renvoit sur le board
-//header('location:board.php');
+header('location:board.php');
 
 
 

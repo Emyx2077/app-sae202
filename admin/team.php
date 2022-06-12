@@ -24,7 +24,7 @@ $resultat = $resultat->fetch(PDO::FETCH_ASSOC);
 
 echo 'Nom : '.$resultat['teamNom'].'<br>';
 echo 'Code : '.$resultat['teamCode'].'<br>';
-echo 'Nombre de joueurs : '.$resultat['teamNbPlayers'].'<br>';
+//echo 'Nombre de joueurs : '.$resultat['teamNbPlayers'].'<br>';
 echo 'ID de la team : '.$resultat['teamId'].'<br><br>';
 
 

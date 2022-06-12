@@ -45,41 +45,20 @@ function afficherUsers($mabd, $req) {
 
     $lignes_resultat = $resultat->rowCount();
     if ($lignes_resultat>0) {
+        echo '<table>'."\n";
+        echo '<thead><th>ID User</th><th>Prenom</th><th>Nom</th><th>ID Team</th></thead>';
         while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
-            echo '<ul>';
-            echo '<li>'.$ligne['userId'].'</li>';
-            echo '<li>'.$ligne['userPrenom'].'</li>';
-            echo '<li>'.$ligne['userNom'].'</li>';
-            echo '<li>'.$ligne['userTeamId'].'</li>';
-            echo '</ul>';
+            echo '<tr>';
+            echo '<td>'.$ligne['userId'].'</td>';
+            echo '<td>'.$ligne['userPrenom'].'</td>';
+            echo '<td>'.$ligne['userNom'].'</td>';
+            echo '<td>'.$ligne['userTeamId'].'</td>';
+            echo '</tr>';
         }
+        echo '</table>'."\n";
     } else {
         echo '<p>Pas de résultat !</p>'; }
 }
-
-/*function afficherTeams($mabd, $req) {
-
-    try {
-        $resultat = $mabd->query($req);
-    } catch (PDOException $e) {
-        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
-        die();
-    }
-
-    $lignes_resultat = $resultat->rowCount();
-    if ($lignes_resultat>0) {
-        while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
-            echo '<ul>';
-            echo '<li>'.$ligne['teamId'].'</li>';
-            echo '<li>'.$ligne['teamNom'].'</li>';
-            echo '<li>'.$ligne['teamLvl'].'</li>';
-            echo '<li>'.$ligne['teamNbPlayers'].'</li>';
-            echo '<li>'.$ligne['teamCode'].'</li>';
-            echo '</ul>';
-        }
-    } else {
-        echo '<p>Pas de résultat !</p>'; }
-}*/
 
 function afficherTeams($mabd, $req) {
 
@@ -132,16 +111,19 @@ function afficherKeys($mabd, $req) {
 
     $lignes_resultat = $resultat->rowCount();
     if ($lignes_resultat>0) {
+        echo '<table>'."\n";
+        echo '<thead><th>ID</th><th>Key</th><th>Location</th><th>Indice</th></thead>';
         while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
             $hashKey .= $ligne['hashKey'];
-            echo '<ul>';
-            echo '<li>'.$ligne['hashId'].'</li>';
-            echo '<li>'.$ligne['hashKey'].'</li>';
-            echo '<li>'.$ligne['hashIndice'].'</li>';
-            echo '<li>'.$ligne['hashHint'].'</li>';
-            echo '</ul>';
+            echo '<tr>';
+            echo '<td>'.$ligne['hashId'].'</td>';
+            echo '<td>'.$ligne['hashKey'].'</td>';
+            echo '<td>'.$ligne['hashIndice'].'</td>';
+            echo '<td>'.$ligne['hashHint'].'</td>';
+            echo '</tr>';
         }
-        return $hashKey;
+        echo '<tr><td colspan="4">'.$hashKey.'</td></tr>';
+        echo '</table>'."\n";
     } else {
         echo '<p>Pas de résultat !</p>'; }
 }
@@ -157,11 +139,16 @@ function showUploads($mabd, $req) {
 
     $lignes_resultat = $resultat->rowCount();
     if ($lignes_resultat>0) {
+        echo '<table>'."\n";
+        echo '<thead><th>Nom Team</th><th>From</th><th>img</th></thead>';
         while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
-            echo '<h3>'.$ligne['teamNom'].'</h3><br>';
-            echo 'activité : '.$ligne['uploadNom'].'<br>';
-            echo '<img src="../'.$ligne['uploadImg'].'"><br>';
+            echo '<tr>';
+            echo '<td>'.$ligne['teamNom'].'</td>';
+            echo '<td>'.$ligne['uploadNom'].'</td>';
+            echo '<td><img src="../'.$ligne['uploadImg'].'" style="width: 100px;"></td>';
+            echo '</tr>';
         }
+        echo '</table>'."\n";
     } else {
         echo '<p>Pas de résultat !</p>'; }
 }

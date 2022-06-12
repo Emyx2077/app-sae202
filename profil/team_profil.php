@@ -1,10 +1,6 @@
 <?php require'../head.php'; ?>
 
 <?php
-    if (!empty($_SESSION['erreur'])) {
-        echo '<p class="erreur">'.$_SESSION['erreur'].'</p>';
-        unset ($_SESSION['erreur']);
-    }
 
 //afficher s'ils existent les bouts de clé déjà présents
 
@@ -21,31 +17,61 @@ try {
     die();
 }
 
-
-if ($lignes_resultat>0) {
-    while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
-        echo $ligne['hashId'].' ';
-        echo $ligne['hashKey'].'<br>';
-    }
-} else {
-    echo '<p>Aucune clé découverte pour le moment</p>'; }
-
-deconnexion($co);
+echo '<div class="d-flex justify-content-center flex-wrap">
+        <div class="bg-light m-2 mt-5 p-5 border rounded" style="min-width: 400px">
+        <h3 class="mb-4">Ajoute un indice</h3>';
 
 
-//valider une nouvelle key
-?>
-<form action="is_valid.php" method="post">
-    Bout de code obtenu lors de l'atelier <input type="text" name="indice" required /><br>
-    <input type="submit" value="Envoyer">
-</form>
+        if ($lignes_resultat>0) {
+            echo '<ul class="list-group">';
+            while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
+                echo '<li class="list-group-item">'.$ligne['hashId'].' - ';
+                echo $ligne['hashKey'].'</li><br>';
+            }
+            echo '</ul>';
+        } else {
+            echo '<p>Aucune clé découverte pour le moment</p>'; }
+
+        deconnexion($co);
+
+        //display si l'indice existe déjà
+
+        if (!empty($_SESSION['erreur'])) {
+            echo '<p class="text-danger">'.$_SESSION['erreur'].'</p>';
+            unset ($_SESSION['erreur']);
+        }
+
+        //valider une nouvelle key
+        ?>
+        <form action="is_valid.php" method="post">
+            <input class="form-control" placeholder="Valider un indice" type="text" name="indice" required /><br>
+            <input type="submit" value="Envoyer" class="float-right btn btn-primary">
+        </form>
+
+    </div>
 
 
-<!--si pas de photo de team
-uploader la photo de groupe de la team-->
-<form action="photo.php" method="post" enctype="multipart/form-data">
-    La photo de votre groupe <input type="file" name="pic" required/><br>
-    <input type="submit" value="Envoyer">
-</form>
 
-<!--sinon la montrer-->
+    <div class="bg-light mt-5 m-2 p-5 border rounded" style="min-width: 400px; max-height: 350px">
+
+        <?php
+        //si une photo a déjà été up on la montre, sinon on affiche le form pour en up une
+        if (!empty($_SESSION['picPath'])){
+            echo '<h3>Votre photo d\'équipe</h3><br>';
+            echo '<a href="img/'.$_SESSION['picPath'].'"><img class="img-thumbnail" style="width :200px" src="img/'.$_SESSION['picPath'].'"></a>';
+        } else {
+            ?>
+
+        <form action="photo.php" method="post" enctype="multipart/form-data">
+            <h3>La photo de votre groupe</h3><br>
+            <div class="custom-file w-100">
+                <input type="file" class="custom-file-input" name="pic" required>
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+            <br><input type="submit" value="Envoyer" class="float-right m-2 btn btn-primary">
+        </form>
+    </div>
+</div>
+
+<?php }
+

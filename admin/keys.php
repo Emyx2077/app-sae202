@@ -2,13 +2,11 @@
 
 $co = connexion();
 
-echo 'clé actuel';
+echo '<h3>Clé actuel</h3>';
 
 $req='SELECT * FROM hash';
 
-$hashKey = afficherKeys($co, $req);
-
-echo $hashKey;
+afficherKeys($co, $req);
 
 ?>
 

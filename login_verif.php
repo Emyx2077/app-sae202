@@ -38,10 +38,10 @@ if ($ligne>0) {
         header('location:board.php');
     } else {
         $_SESSION['erreur'] = "utilisateur inconnu";
-        header('location:login.php');
+        header('location:index.php');
     }
 } else {
     $_SESSION['erreur'] = "utilisateur inconnu";
-    header('location:login.php');
+    header('location:index.php');
 }
 
