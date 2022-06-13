@@ -152,3 +152,22 @@ function showUploads($mabd, $req) {
     } else {
         echo '<p>Pas de résultat !</p>'; }
 }
+
+function showSuspect($mabd, $req){
+    try {
+        $resultat = $mabd->query($req);
+    } catch (PDOException $e) {
+        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
+        die();
+    }
+
+        $ligne = $resultat->fetch(PDO::FETCH_ASSOC);
+        echo '<table>'."\n";
+        echo '<thead><th>ID</th><th>Nom</th><th>Hash Code</th></thead>';
+            echo '<tr>';
+            echo '<td>'.$ligne['suspectId'].'</td>';
+            echo '<td>'.$ligne['suspectNom'].'</td>';
+            echo '<td>'.$ligne['suspectHash'].'</td>';
+            echo '</tr>';
+        echo '</table>'."\n";
+}

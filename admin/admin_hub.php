@@ -12,3 +12,5 @@
 <a href="upload.php">global upload</a>
 <br>
 <a href="keys.php">gestion key</a>
+<br>
+<a href="imposteur.php">imposteur</a>
