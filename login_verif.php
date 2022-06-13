@@ -1,16 +1,16 @@
 <?php require 'lib/lib.inc.php';
 
-$prenom=sanitize($_POST['prenom']);
-$nom=sanitize($_POST['nom']);
+//$prenom=sanitize($_POST['prenom']);
+$mail=sanitize($_POST['mail']);
 $password=$_POST['password'];
 
 $co=connexion();
 
-//select data from user associated with input (and load team table too, for loading session)
+//select data associés a l'user dans la DB
 $req='SELECT * FROM users 
         LEFT JOIN teams
         ON teams.teamId=users.userTeamId
-        WHERE userPrenom="'.$prenom.'" AND userNom="'.$nom.'";';
+        WHERE userMail="'.$mail.'";';
 
 echo $req;
 
@@ -41,7 +41,7 @@ if ($ligne>0) {
         header('location:index.php');
     }
 } else {
-    $_SESSION['erreur'] = "utilisateur inconnu";
+    $_SESSION['erreur'] = "Utilisateur inconnu";
     header('location:index.php');
 }
 
