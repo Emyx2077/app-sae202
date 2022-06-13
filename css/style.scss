@@ -2,28 +2,28 @@
   list-style: none;
 }
 
-ul {
+ul{
   display: flex;
 }
 
-li {
+li{
   margin: 15px;
 }
 
-table, th, td {
+table, th, td{
   border: solid 1px black;
 }
 
-.erreur {
+.erreur{
   color: red;
 }
 
-.playersDiv {
+.playersDiv{
   border: 2px solid black;
   margin: 10px;
 }
 
-.piaf {
+.piaf{
   width: 130px;
 }
 
@@ -50,23 +50,22 @@ table, th, td {
     top: -100px;
     left: 100px;
 }*/
-.piaf img {
+
+.piaf img{
   max-width: 100%;
   max-height: 100%;
 }
 
-.piaf img:hover {
+.piaf img:hover{
   filter: hue-rotate(90deg);
 }
 
-.background {
+.background{
   height: 100vh;
   background-image: url("../img/grid.jpeg");
 }
 
-.bienvenue {
+.bienvenue{
   margin-top: 90px;
   color: white;
 }
-
-/*# sourceMappingURL=style.css.map */
