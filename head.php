@@ -16,7 +16,7 @@
     <?php require 'lib/lib.inc.php'; ?>
 
 </head>
-<body>
+<body class="background">
 
 
 

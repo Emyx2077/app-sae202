@@ -5,7 +5,7 @@ if (!empty($_SESSION['userId'])){
 }
 ?>
 
-<div class="background d-flex flex-column align-items-center">
+<div class="d-flex flex-column align-items-center">
 
     <div class="mt-5 form-group w-50 text-white">
         <h2 class="mb-3 text-center">S'inscrire</h2>

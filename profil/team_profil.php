@@ -17,8 +17,8 @@ try {
     die();
 }
 
-echo '<div class="background d-flex justify-content-center flex-wrap">
-        <div class="bg-light m-2 mt-5 p-5 border rounded" style="min-width: 400px">
+echo '<div class="d-flex justify-content-center flex-wrap">
+        <div class="bg-light m-2 mt-5 p-5 border rounded mh-10" style="min-width: 400px">
         <h3 class="mb-4">Ajoute un indice</h3>';
 
 
@@ -43,14 +43,14 @@ echo '<div class="background d-flex justify-content-center flex-wrap">
         ?>
         <form action="is_valid.php" method="post">
             <input class="form-control" placeholder="Valider un indice" type="text" name="indice" required /><br>
-            <input type="submit" value="Envoyer" class="float-right btn btn-primary">
+            <input type="submit" value="Envoyer" class="float-end btn btn-primary">
         </form>
 
     </div>
 
 
 
-    <div class="bg-light mt-5 m-2 p-5 border rounded" style="min-width: 400px; max-height: 350px">
+    <div class="bg-light mt-5 m-2 p-5 border rounded w-25" style="min-width: 400px; max-height: 350px">
 
         <?php
         //si une photo a déjà été up on la montre, sinon on affiche le form pour en up une
@@ -85,11 +85,10 @@ echo '<div class="background d-flex justify-content-center flex-wrap">
 
         <form action="photo.php" method="post" enctype="multipart/form-data">
             <h3>La photo de votre groupe</h3><br>
-            <div class="custom-file w-100">
-                <input type="file" class="custom-file-input" name="pic" required>
-                <label class="custom-file-label" for="customFile">Choose file</label>
+            <div class="input-group mb-3 w-100">
+                <input type="file" class="form-control" id="inputGroupFile02" name="pic" required>
             </div>
-            <br><input type="submit" value="Envoyer" class="float-right m-2 btn btn-primary">
+            <br><input type="submit" value="Envoyer" class=" m-2 btn btn-primary float-end">
         </form>
     </div>
 </div>

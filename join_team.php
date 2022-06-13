@@ -1,6 +1,6 @@
 <?php require'head.php'; ?>
 
-<div class="background d-flex justify-content-center">
+<div class="d-flex justify-content-center">
     <div class="text-white w-75 p-4 m-5" style="margin-top: 0px">
         <?php
         if (!empty($_SESSION['erreur'])) {

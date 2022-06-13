@@ -7,7 +7,7 @@ if(empty($_SESSION['userId'])){
 
 ?>
 
-<div class="background">
+<div>
 
     <div class="piaf">
         <a href="ateliers/mouette.php"><img src="img/mouette.png" alt="mouette"></a>
