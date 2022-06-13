@@ -17,7 +17,7 @@ try {
     die();
 }
 
-echo '<div class="d-flex justify-content-center flex-wrap">
+echo '<div class="background d-flex justify-content-center flex-wrap">
         <div class="bg-light m-2 mt-5 p-5 border rounded" style="min-width: 400px">
         <h3 class="mb-4">Ajoute un indice</h3>';
 
@@ -94,5 +94,7 @@ echo '<div class="d-flex justify-content-center flex-wrap">
     </div>
 </div>
 
-<?php }
+<?php } require '../end.php'; ?>
+
+
 

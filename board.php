@@ -30,3 +30,6 @@ if(empty($_SESSION['userId'])){
     </div>
 
 </div>
+
+
+<?php require 'end.php'; ?>

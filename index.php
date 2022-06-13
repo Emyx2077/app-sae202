@@ -15,7 +15,7 @@ if (!empty($_SESSION['userId'])){
             <input class="form-control" placeholder="Ton nom" type="text" name="nom" required/><br>
             <input class="form-control" placeholder="Ton Email" type="email" name="mail" required/><br>
             <input class="form-control" placeholder="Ton code etudiant (qui sert de mot de passe)" type="text" name="password" required/><br>
-            <input type="submit" value="S'inscrire" class="btn btn-primary float-right">
+            <input type="submit" value="S'inscrire" class="btn btn-primary float-end">
         </form>
         <?php
         if (!empty($_SESSION['erreurMail'])) {
@@ -31,8 +31,8 @@ if (!empty($_SESSION['userId'])){
 
         <form action="login_verif.php" method="post">
             <input class="form-control" placeholder="Ton Email" type="email" name="mail" required/><br>
-            <input class="form-control" placeholder="Ton code étudiant" type="text" name="password" required/><br>
-            <input type="submit" value="Se connecter" class="btn btn-primary float-right">
+            <input class="form-control" placeholder="Ton mot de passe (ton code etudiant)" type="text" name="password" required/><br>
+            <input type="submit" value="Se connecter" class="btn btn-primary float-end">
         </form>
 
         <?php
