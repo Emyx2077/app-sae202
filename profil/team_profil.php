@@ -23,12 +23,12 @@ echo '<div class="d-flex justify-content-center flex-wrap">
 
 
         if ($lignes_resultat>0) {
-            echo '<ul class="list-group">';
+            echo '<ol class="list-group list-group-numbered">';
             while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
-                echo '<li class="list-group-item">'.$ligne['hashId'].' - ';
-                echo $ligne['hashKey'].'</li><br>';
+                //echo '<li class="list-group-item">'.$ligne['hashId'].' - ';
+                echo '<li class="list-group-item rounded">'.$ligne['hashKey'].'</li><br>';
             }
-            echo '</ul>';
+            echo '</ol>';
         } else {
             echo '<p>Aucune clé découverte pour le moment</p>'; }
 
