@@ -17,7 +17,7 @@ try {
 //div pour valider un nouvel indice
 ?>
 
-<div class="d-flex justify-content-center flex-wrap">
+<div class="d-flex justify-content-center flex-wrap mt-5">
 
     <div class="bg-light mt-5 m-2 p-5 border rounded w-25" style="min-width: 400px; max-height: 350px">
 
@@ -100,13 +100,12 @@ try {
         deconnexion($co);
         ?>
 
-        <form action="is_valid_end.php" method="post">
+        <form action="is_valid_end.php" method="post" style="margin-top: 110px">
             <input class="form-control" placeholder="Entrer la phrase de décodage" type="text" name="pass" required /><br>
             <input type="submit" value="Envoyer" class="float-end btn btn-primary">
 
             <?php $_SESSION['hash'] = $hashkeys ?>
         </form>
-
 
 
     </div>
