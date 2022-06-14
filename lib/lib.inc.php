@@ -114,13 +114,13 @@ function afficherKeys($mabd, $req) {
     $lignes_resultat = $resultat->rowCount();
     if ($lignes_resultat>0) {
         echo '<table>'."\n";
-        echo '<thead><th>ID</th><th>Key</th><th>Location</th><th>Indice</th></thead>';
+        echo '<thead><th>ID</th><th>Key</th><th>Code Salle</th><th>Indice</th></thead>';
         while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
             $hashKey .= $ligne['hashKey'];
             echo '<tr>';
             echo '<td>'.$ligne['hashId'].'</td>';
             echo '<td>'.$ligne['hashKey'].'</td>';
-            echo '<td>'.$ligne['hashIndice'].'</td>';
+            echo '<td>'.$ligne['hashRoomCode'].'</td>';
             echo '<td>'.$ligne['hashHint'].'</td>';
             echo '</tr>';
         }

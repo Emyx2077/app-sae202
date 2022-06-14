@@ -4,9 +4,10 @@ require'../head.php';
 ?>
 
 
+<div>
 
-<div class="background">
-
-<h1 class="bienvenue">Bienvenue dans le royaume du pingouin</h1>
+<h1 class="text-center text-white">Bienvenue dans le royaume du pingouin</h1>
 
 </div>
+
+<?php require '../end.php'; ?>

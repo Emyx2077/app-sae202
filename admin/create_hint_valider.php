@@ -27,7 +27,7 @@ for ($i=0 ; $i< $size; $i++) {
     $hint = $_POST[$hi];
     $key = $splitSentence[$i];
 
-    $req = 'INSERT INTO hash (hashKey, hashIndice, hashHint) VALUES ("'.$key.'", "'.$location.'", "'.$hint.'");';
+    $req = 'INSERT INTO hash (hashKey, hashRoomCode, hashHint) VALUES ("'.$key.'", "'.$location.'", "'.$hint.'");';
 
     try {
         $resultat=$co->query($req); // exécuter la requête
