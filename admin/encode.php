@@ -3,25 +3,37 @@
 require'head_admin.php';
 
 //reccuprer et encoder en base64 la phrase final
-$finalSentence = base64_encode($_POST['finalSentence']);
+$base64sentence = base64_encode($_POST['finalSentence']);
 $password = $_POST['keyPass'];
 $nbRoom = $_POST['nb'];
 
-$finalSentenceLength = strlen($finalSentence);
+//encodage via password
+$method = "aes-256-cbc";
+$iv = 'dontyoulectureme'; //a peut etre modifier
 
-if ($finalSentenceLength < $nbRoom){
+$encData = openssl_encrypt($base64sentence, $method, $password, false, $iv);
+
+//echo $encData.'<br>';
+
+
+//calcul longueur phrase final, encoder base64 et vigenere
+$encDataStrLength = strlen($encData);
+
+//echo $encDataStrLength.'<br>';
+
+if ($encDataStrLength < $nbRoom){
     $_SESSION['erreur'] = "phrase finale trop courte par rapport au nombre de salle";
     header('location:key_create.php');
 }
 
-$cutIn =  $finalSentenceLength / $nbRoom;
 
-/*echo $finalSentenceLength.'<br>';
-echo $finalSentence.'<br>';*/
+//calcul pour savoir en combien de morceau diviser la clé
+$cutIn =  $encDataStrLength / $nbRoom;
 
-$splitSentence =  str_split($finalSentence,  $cutIn);
+//echo $cutIn.'<br>';
 
-$_SESSION['split'] = str_split($finalSentence,  $cutIn);
+//on log la phrase encoder en X suite X caract
+$_SESSION['split'] = str_split($encData,  $cutIn);
 
 header('location:create_hint.php');
 

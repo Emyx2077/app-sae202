@@ -20,8 +20,3 @@ echo '<form action="create_hint_valider.php" method="POST">';
     echo '<input type="submit" value="Envoyer">';
 echo '</form>';
 
-
-
-//drop tt les values de la table
-
-//ajouter les nouvelles keys
