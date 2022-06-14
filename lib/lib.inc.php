@@ -1,5 +1,7 @@
 <?php
 
+require 'secret.php';
+
 session_start();
 
 function connexion(){
@@ -170,4 +172,36 @@ function showSuspect($mabd, $req){
             echo '<td>'.$ligne['suspectHash'].'</td>';
             echo '</tr>';
         echo '</table>'."\n";
+}
+
+function showTeamImg($co){
+
+    $req = 'SELECT uploadImg FROM upload WHERE uploadTeamCode = "'.$_SESSION['teamCode'].'";';
+
+    try {
+        $resultat=$co->query($req); // exécuter la requête
+        $lignes_resultat = $resultat->rowCount();
+    } catch (PDOException $e) {
+        print "Erreur : ".$e->getMessage().'<br />';
+        die();
+    }
+
+    $resultat = $resultat->fetch(PDO::FETCH_ASSOC);
+
+    if (!empty($resultat)){
+        return $resultat['uploadImg'];
+    }
+}
+
+function teamFinishing($co, $code){
+    $date = date('H:i:s');
+
+    $req = 'INSERT INTO time (timeTeamId, time)VALUES ("'.$code.'", "'.$date.'");';
+
+    try {
+        $co->query($req); // exécuter la requête
+    } catch (PDOException $e) {
+        print "Erreur : ".$e->getMessage().'<br />';
+        die();
+    }
 }

@@ -8,8 +8,8 @@ $password = $_POST['keyPass'];
 $nbRoom = $_POST['nb'];
 
 //encodage via password
-$method = "aes-256-cbc";
-$iv = 'dontyoulectureme'; //a peut etre modifier
+$method = METHOD;
+$iv = IV; //à peut être modifier
 
 $encData = openssl_encrypt($base64sentence, $method, $password, false, $iv);
 
