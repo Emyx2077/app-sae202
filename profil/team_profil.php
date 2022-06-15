@@ -83,7 +83,7 @@ try {
 
     </div>
 
-    <div class="bg-light m-2 mt-5 p-5 border rounded mh-10" style="min-width: 400px; max-height: 440px"">
+    <div class="bg-light m-2 mt-5 p-5 border rounded mh-10" style="min-width: 400px; max-height: 440px;">
         <h3 class="mb-4 text-center">Déchiffrement final</h3>
 
         <?php
@@ -100,7 +100,7 @@ try {
         deconnexion($co);
         ?>
 
-        <form action="is_valid_end.php" method="post" style="margin-top: 110px">
+        <form action="is_valid_end.php" method="post" >
             <input class="form-control" placeholder="Entrer la phrase de décodage" type="text" name="pass" required /><br>
             <input type="submit" value="Envoyer" class="float-end btn btn-primary">
 

@@ -14,7 +14,6 @@ if (empty($_SESSION['teamCode'])){
     echo '<li><a class="dropdown-item" href="/sae202/app-sae202/deconnexion.php">Déconnexion</a></li>';
 } else {
     echo '<li><a class="dropdown-item" href="/sae202/app-sae202/profil/team_profil.php">'.ucfirst($_SESSION['teamNom']).' # '.$_SESSION['teamCode'].'</a><hr>';
-    echo '<li><a class="dropdown-item" href="/sae202/app-sae202/team.php">Create team</a></li>';
     echo '<li><a class="dropdown-item" href="/sae202/app-sae202/join_team.php">Change de team</a></li><hr>';
     echo '<li><a class="dropdown-item" href="/sae202/app-sae202/deconnexion.php">Déconnexion</a></li>';
 }

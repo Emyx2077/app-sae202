@@ -51,6 +51,9 @@ if ($resultat['hashHint'] == $hint){
         print "Erreur : ".$e->getMessage().'<br />';
         die();
     }
+
+    deleteTeamInprogress($co, $teamCode);
+
     deconnexion($co);
     header('location:team_profil.php');
 

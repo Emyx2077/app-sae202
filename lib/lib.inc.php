@@ -205,3 +205,14 @@ function teamFinishing($co, $code){
         die();
     }
 }
+
+function deleteTeamInprogress($co, $teamCode){
+    $req = 'DELETE FROM inprogress WHERE inprogressTeamCode="'.$teamCode.'"';
+
+    try {
+        $resultat = $co->query($req);
+    } catch (PDOException $e) {
+        echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+        die();
+    }
+}
