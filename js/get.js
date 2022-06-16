@@ -1,10 +1,11 @@
-/*document.getElementById("reload").addEventListener("click", function (e) {
-    e.preventDefault()*/
-
+const pingouin = document.getElementById("pingouin");
+const mouette = document.getElementById("mouette");
+const oie = document.getElementById("oie");
+const pintade = document.getElementById("pintade");
+const poule = document.getElementById("poulet");
 
 
 getRoomNb()
-
 
 function getRoomNb(){
 
@@ -14,9 +15,24 @@ function getRoomNb(){
     xhr.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             //permet a la fonction de s'appeler elle même toutes les X ms
-            setTimeout(getRoomNb,1000);
+            setTimeout(getRoomNb,2000);
 
             const data = JSON.parse(this.responseText);
+
+            //log la mouette
+            mouette.innerText = data[201]
+
+            //log l'oie'
+            oie.innerText = data[009]
+
+            //log le pingouin
+            pingouin.innerText = data[205]
+
+            //log la pintade
+            pintade.innerText = data[017]
+
+            //log la poule
+            poule.innerText = data[007]
 
             //on compare le nombre d'équipe actuellement dans une salle avec a sa limite
             //la limite est malheureusement fixé en dur dans le code

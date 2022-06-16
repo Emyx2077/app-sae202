@@ -19,7 +19,7 @@ $encData = openssl_encrypt($base64sentence, $method, $password, false, $iv);
 //calcul longueur phrase final, encoder base64 et vigenere
 $encDataStrLength = strlen($encData);
 
-//echo $encDataStrLength.'<br>';
+echo $encDataStrLength.'<br>';
 
 if ($encDataStrLength < $nbRoom){
     $_SESSION['erreur'] = "phrase finale trop courte par rapport au nombre de salle";
@@ -29,11 +29,13 @@ if ($encDataStrLength < $nbRoom){
 
 //calcul pour savoir en combien de morceau diviser la clé
 $cutIn =  $encDataStrLength / $nbRoom;
+$cutIn += 1;
 
-//echo $cutIn.'<br>';
+echo $cutIn.'<br>';
 
 //on log la phrase encoder en X suite X caract
 $_SESSION['split'] = str_split($encData,  $cutIn);
+print_r($_SESSION['split']);
 
 header('location:create_hint.php');
 
