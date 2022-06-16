@@ -15,7 +15,7 @@ echo '<div class="d-flex flex-column align-items-center">
         }
 
         echo '<form action="join_activity.php" method="post">
-                    <input class="form-control" max="9999" placeholder="Veuillez entrer le code de la salle (qui se trouve sur la porte)" type="number" name="roomCode" required/><br>
+                    <input class="form-control" max="999" placeholder="Veuillez entrer le code de la salle (qui se trouve sur la porte)" type="number" name="roomCode" required/><br>
                     <input type="submit" value="Envoyer" class="btn btn-primary float-end">
                 </form>';
 
