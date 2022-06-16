@@ -39,30 +39,18 @@ while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
 }
 
 $a = array_count_values($roomCode2);
+echo json_encode($a);
+//print_r($a);
 
+/*print_r($a);
 $keys = array_keys($a);
 
 $count = count($keys);
 
-echo '<br>';
-
 for ($i = 0; $i < $count; $i++){
     if ($a[$keys[$i]] >= 5){
-        echo $keys[$i];
+        //print_r($a);
         //ça sors la salle qui depasse 5, faire une req ou jsp pour la bloquer
     }
-}
-
-
-
-//on créer un tableau avec tout les room code
-
-//on compare chaque entrée du tableau a chaque resultat de inprogress
-//on compte le nb de fois où ça match
-
-
-
-
-//when match > POULET
-//injection ajax sur le board pour le bloquer
+}*/
 

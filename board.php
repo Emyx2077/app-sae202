@@ -31,5 +31,9 @@ if(empty($_SESSION['userId'])){
 
 </div>
 
+<buttton class="btn btn-primary" id="reload">RELOAD</buttton>
+
+
+<script src="js/get.js"></script>
 
 <?php require 'end.php'; ?>
