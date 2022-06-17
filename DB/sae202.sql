@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 14, 2022 at 07:31 PM
+-- Generation Time: Jun 17, 2022 at 07:56 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.26
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `hash` (
   `hashId` int(99) NOT NULL,
   `hashKey` varchar(99) NOT NULL,
-  `hashIndice` varchar(99) NOT NULL,
+  `hashRoomCode` varchar(99) NOT NULL,
   `hashHint` varchar(99) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -38,11 +38,12 @@ CREATE TABLE `hash` (
 -- Dumping data for table `hash`
 --
 
-INSERT INTO `hash` (`hashId`, `hashKey`, `hashIndice`, `hashHint`) VALUES
-(119, 'iPXoF8', 'a', 'lefilrouge'),
-(120, 'ar3obK', 'b', 'lefilbleu'),
-(121, '4Fohx1', 'c', 'lefiljaune'),
-(122, 'tCfA==', 'd', 'lefilorange');
+INSERT INTO `hash` (`hashId`, `hashKey`, `hashRoomCode`, `hashHint`) VALUES
+(127, 'gvFpaYnl3PqWC', '17', 'anatidae'),
+(128, 'Bj1ddteRfpci0', '201', 'belisama'),
+(129, 'dWEj9aBLyygUc', '205', 'linustorvald'),
+(130, 'erarBICtEkvVO', '9', 'macintoshplus'),
+(131, 'UhxhmxrArvqR', '7', 'nuggies');
 
 -- --------------------------------------------------------
 
@@ -57,50 +58,41 @@ CREATE TABLE `hashAccess` (
   `hashId` int(99) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `hashAccess`
+-- Table structure for table `inprogress`
 --
 
-INSERT INTO `hashAccess` (`hashAccessId`, `teamCode`, `teamNom`, `hashId`) VALUES
-(1, 5893, 'xdcftvgybhuj', 1),
-(2, 5893, 'xdcftvgybhuj', 2),
-(3, 5893, 'xdcftvgybhuj', 3),
-(4, 5893, 'xdcftvgybhuj', 4),
-(5, 5893, 'xdcftvgybhuj', 6),
-(6, 5893, 'xdcftvgybhuj', 7),
-(7, 5893, 'xdcftvgybhuj', 8),
-(9, 3672, 'ghbeufgzbfzf', 1),
-(10, 3672, 'ghbeufgzbfzf', 2),
-(11, 3672, 'ghbeufgzbfzf', 3),
-(12, 3672, 'ghbeufgzbfzf', 5),
-(13, 3672, 'ghbeufgzbfzf', 7),
-(14, 3672, 'ghbeufgzbfzf', 6),
-(15, 3672, 'ghbeufgzbfzf', 8),
-(16, 4557, 'lala', 1),
-(17, 4557, 'lala', 7),
-(18, 1649, 'fzfzf', 1),
-(19, 9759, 'lateam', 2),
-(20, 9759, 'lateam', 3),
-(21, 9759, 'lateam', 5),
-(22, 9759, 'lateam', 7),
-(23, 9759, 'lateam', 1),
-(24, 9759, 'lateam', 6),
-(25, 9759, 'lateam', 115),
-(26, 9759, 'lateam', 116),
-(27, 9759, 'lateam', 118),
-(28, 9759, 'lateam', 117),
-(29, 1095, 'eaeda', 115),
-(30, 1095, 'eaeda', 116),
-(31, 1095, 'eaeda', 117),
-(32, 1095, 'eaeda', 118),
-(33, 1095, 'eaeda', 119),
-(34, 1095, 'eaeda', 120),
-(35, 1095, 'eaeda', 121),
-(36, 1095, 'eaeda', 122),
-(37, 9759, 'lateam', 119),
-(38, 9759, 'lateam', 121),
-(39, 9759, 'lateam', 120),
-(40, 9759, 'lateam', 122);
+CREATE TABLE `inprogress` (
+  `inprogressId` int(11) NOT NULL,
+  `inprogressRoomCode` int(11) NOT NULL,
+  `inprogressTeamCode` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `room`
+--
+
+CREATE TABLE `room` (
+  `roomId` int(11) NOT NULL,
+  `roomCode` int(11) NOT NULL,
+  `roomMaxTeam` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `room`
+--
+
+INSERT INTO `room` (`roomId`, `roomCode`, `roomMaxTeam`) VALUES
+(1, 17, 6),
+(2, 9, 5),
+(3, 205, 5),
+(4, 201, 5),
+(5, 7, 5),
+(6, 18, 4);
 
 -- --------------------------------------------------------
 
@@ -110,7 +102,7 @@ INSERT INTO `hashAccess` (`hashAccessId`, `teamCode`, `teamNom`, `hashId`) VALUE
 
 CREATE TABLE `suspect` (
   `suspectId` int(11) NOT NULL,
-  `suspectNom` varchar(11) NOT NULL,
+  `suspectNom` varchar(99) NOT NULL,
   `suspectHash` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -119,7 +111,7 @@ CREATE TABLE `suspect` (
 --
 
 INSERT INTO `suspect` (`suspectId`, `suspectNom`, `suspectHash`) VALUES
-(1, 'alo', 'alo');
+(1, 'alexandre garcia', '1234');
 
 -- --------------------------------------------------------
 
@@ -135,20 +127,6 @@ CREATE TABLE `teams` (
   `teamCode` varchar(99) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `teams`
---
-
-INSERT INTO `teams` (`teamId`, `teamNom`, `teamLvl`, `teamNbPlayers`, `teamCode`) VALUES
-(34, 'lala', 0, 1, '4557'),
-(35, 'po', 0, 5, '7048'),
-(36, 'ghbeufgzbfzf', 0, 1, '3672'),
-(37, '42', 0, 1, '7485'),
-(38, 'test', 0, 1, '1590'),
-(39, 'fzfzf', 0, 1, '1649'),
-(40, 'lateam', 0, 1, '9759'),
-(41, 'eaeda', 0, 1, '1095');
-
 -- --------------------------------------------------------
 
 --
@@ -160,17 +138,6 @@ CREATE TABLE `time` (
   `timeTeamId` int(11) NOT NULL,
   `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `time`
---
-
-INSERT INTO `time` (`timeId`, `timeTeamId`, `time`) VALUES
-(2, 9759, '16:49:59'),
-(3, 9759, '18:18:53'),
-(4, 9759, '18:19:03'),
-(5, 9759, '18:19:11'),
-(6, 9759, '18:19:15');
 
 -- --------------------------------------------------------
 
@@ -184,23 +151,6 @@ CREATE TABLE `upload` (
   `uploadTeamCode` int(99) NOT NULL,
   `uploadImg` varchar(999) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `upload`
---
-
-INSERT INTO `upload` (`uploadId`, `uploadNom`, `uploadTeamCode`, `uploadImg`) VALUES
-(3, 'groupPic', 7048, '/profil/img/2022_06_11_20_02_22---6fa8d995d2abe0c09615e8046faf2025.png'),
-(4, 'groupPic', 7048, '/profil/img/2022_06_11_20_02_44---6fa8d995d2abe0c09615e8046faf2025.png'),
-(6, 'groupPic', 3672, '/profil/img/2022_06_12_18_10_55---6fa8d995d2abe0c09615e8046faf2025.png'),
-(7, 'groupPic', 3672, 'profil/img/2022_06_12_18_13_08---6fa8d995d2abe0c09615e8046faf2025.png'),
-(8, 'groupPic', 3672, '2022_06_12_18_16_05---6fa8d995d2abe0c09615e8046faf2025.png'),
-(9, 'groupPic', 3672, '2022_06_12_18_16_38---6fa8d995d2abe0c09615e8046faf2025.png'),
-(10, 'groupPic', 4557, '2022_06_12_20_32_00---6fa8d995d2abe0c09615e8046faf2025.png'),
-(11, 'groupPic', 1649, '2022_06_12_20_37_31---6fa8d995d2abe0c09615e8046faf2025.png'),
-(12, 'groupPic', 9759, '2022_06_13_21_52_46---6fa8d995d2abe0c09615e8046faf2025.png'),
-(13, 'groupPic', 1095, '2022_06_14_11_40_21---6fa8d995d2abe0c09615e8046faf2025.png'),
-(14, 'groupPic', 1095, '2022_06_14_11_42_06---6fa8d995d2abe0c09615e8046faf2025.png');
 
 -- --------------------------------------------------------
 
@@ -218,32 +168,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`userId`, `userPrenom`, `userNom`, `userTeamId`, `userPassword`, `userMail`) VALUES
-(36, 'admin', 'admin', 31, '$2y$10$oIWFLT/dp0Jkl9nyiCQD4uISQJLvRNgRCzfx/MRa7pjMppK77XHBW', ''),
-(37, 'alo', 'alo', 34, '$2y$10$mVBIV0GmNfNmqNkbqs8YQ.Le4k9U/BbPc2EQwTo5q6QW58zVBXDe2', ''),
-(38, 'tro', 'tro', 33, '$2y$10$OfxN5tlOwrnmGydfveiXfORDTS0fEiWsnQyo6m3gb9HD7nMmecbcO', ''),
-(39, 'pa', 'pa', 35, '$2y$10$xJGKDWKKFw2i9Dk3DMdil.Tf.edY5G7I5iQxE.skGY82Cs5Cnmcki', ''),
-(41, 'al', 'al', 35, '$2y$10$py3XGpslymiHuQc51LD7f.lHntZ7jf6WhdNbNKORM2rkip3JULmMG', ''),
-(42, 'po', 'po', 34, '$2y$10$G16HNpo4IWOxyQgxNEaYD.Sn6yS6X8k0KQ6zmcnkMl5DsA1ARitn6', ''),
-(43, 'test', 'test', 35, '$2y$10$mdHgcePtdB1crdKfKPqf2eWIgbyJvjdxAAyMy0ZrSWFNclbXzJkLG', ''),
-(44, 'aaaaa', 'aaaa', 38, '$2y$10$JpxyzPp6qGHyfI8DHGbYQ.5WORU8dlzQ634T68gDiCoa64f8fNbZW', ''),
-(45, 'fizbf', 'gjieb', 0, '$2y$10$nORRtIfKkAjv7UHcE0f55ej0KdPbRXqFLm3S5ATzWKA902lr6p8g2', ''),
-(46, 'alo', 'alo', 0, '$2y$10$a6wIFij4HtYmVunsVX9kwuQkkuweSOCAFUr0Bn7DQDymIBCO/vZSO', ''),
-(47, 'zjnfin', 'nfiunf', 39, '$2y$10$eQ5mqIMQO5VW1CjKjLqyseRMLlrHZNP4/bT6ARY8gRvcNbn85.DuC', ''),
-(49, 'test', 'test', 0, '$2y$10$CXd53YI5ZeRZdCaacdDgXuOnOElokfCf6xD0RUesy7aNY44ntH5jq', 'test@mail.com'),
-(50, 'a', 'a', 41, '$2y$10$q6QUiTmR9LGEM6In7.4rVu6iDjuzML/lF/kqo9asOLinlyyMHOKEW', 'test@mail.com'),
-(51, 'a', 'a', 0, '$2y$10$az3UoXsyUbNdeulV64f/QOc7SjeRIQm8OqHjvjlDjo1g4.oZcgkHe', 'test@mail.com'),
-(52, 'a', 'a', 0, '$2y$10$vQ33f5WX.x7rR.pZz/z.5.lO.FzOb3poCe2rpjbAmp5EejUvCJplG', 'a@a.com'),
-(53, 'a', 'a', 0, '$2y$10$Wn26VWM8OgHhuWL6bcg.A.Y7m7tcjNU0GxQOvEaWJ44MOeJ/je0q2', 'a@majgeng.com'),
-(54, 'a', 'a', 0, '$2y$10$FDfz8yolKUdwbNM52/X1QOxiGQDn6rqZ3A5DNfb3/RHtFrh4KOJlW', 'a@hbuijoklnj.com'),
-(55, 'a', 'a', 0, '$2y$10$Tck6cPWdhlUgacgjerFbTOR6xb4sCccwAb0tna8cUE5yR9J2Hy1em', 'a@mail.com'),
-(56, 'admin', 'admin', 40, '$2y$10$sH97VRVpEM9Q.ocLlvXRN.HjE3TpeF9GrnF/tI3XiqjZEtzT3Rmf.', 'admin@admin.com'),
-(57, 'a', 'a', 0, '$2y$10$Xba3s2/cHnUrxgoqwVzFi./nmBqXV50.0hAPX5v/sB95hyyXlMOUy', 'a@zefjzfn.com');
-
---
 -- Indexes for dumped tables
 --
 
@@ -258,6 +182,18 @@ ALTER TABLE `hash`
 --
 ALTER TABLE `hashAccess`
   ADD PRIMARY KEY (`hashAccessId`);
+
+--
+-- Indexes for table `inprogress`
+--
+ALTER TABLE `inprogress`
+  ADD PRIMARY KEY (`inprogressId`);
+
+--
+-- Indexes for table `room`
+--
+ALTER TABLE `room`
+  ADD PRIMARY KEY (`roomId`);
 
 --
 -- Indexes for table `suspect`
@@ -297,13 +233,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `hash`
 --
 ALTER TABLE `hash`
-  MODIFY `hashId` int(99) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `hashId` int(99) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
 -- AUTO_INCREMENT for table `hashAccess`
 --
 ALTER TABLE `hashAccess`
-  MODIFY `hashAccessId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `hashAccessId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
+--
+-- AUTO_INCREMENT for table `inprogress`
+--
+ALTER TABLE `inprogress`
+  MODIFY `inprogressId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
+
+--
+-- AUTO_INCREMENT for table `room`
+--
+ALTER TABLE `room`
+  MODIFY `roomId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `suspect`
@@ -315,25 +263,25 @@ ALTER TABLE `suspect`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `teamId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `teamId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `time`
 --
 ALTER TABLE `time`
-  MODIFY `timeId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `timeId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT for table `upload`
 --
 ALTER TABLE `upload`
-  MODIFY `uploadId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `uploadId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `userId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
