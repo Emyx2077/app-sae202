@@ -9,7 +9,7 @@ $_SESSION['size'] = $size;
 
 
 echo '<div class="d-flex flex-column align-items-center" style="margin-top: 150px">';
-    echo '<form action="create_hint_valider.php" method="POST">';
+    echo '<form action="admin/create_hint_valider.php" method="POST">';
 
         for ($i = 0; $i < $size; $i++ ){
             echo 'bout de key : "'.$splitSentence[$i].'"<br>';

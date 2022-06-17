@@ -9,4 +9,4 @@ $path = "img/";
 
 uploadPic($co, $imageType, $from, $path);
 
-header('location:team_profil.php');
+//header('location:team_profil.php');

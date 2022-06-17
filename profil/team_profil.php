@@ -29,7 +29,7 @@ try {
 
         if (!empty($path)) {
             echo '<h3 class="text-center">Votre photo d\'équipe</h3><br>';
-            echo '<a href="img/'.$path.'"><img class="img-thumbnail" style="width :200px" src="img/'.$path.'"></a>';
+            echo '<a href="profil/img/'.$path.'"><img class="img-thumbnail" style="width :200px" src="img/'.$path.'"></a>';
         } else {
 
 
@@ -39,7 +39,7 @@ try {
             }
             ?>
 
-            <form action="photo.php" method="post" enctype="multipart/form-data">
+            <form action="profil/photo.php" method="post" enctype="multipart/form-data">
                 <h3>La photo de votre groupe</h3><br>
                 <div class="input-group mb-3 w-100">
                     <input type="file" class="form-control" id="inputGroupFile02" name="pic" required>
@@ -76,7 +76,7 @@ try {
         //valider une nouvelle key
         ?>
 
-        <form action="is_valid.php" method="post">
+        <form action="profil/is_valid.php" method="post">
             <input class="form-control" placeholder="Valider un indice" type="text" name="indice" required /><br>
             <input type="submit" value="Envoyer" class="float-end btn btn-primary">
         </form>
@@ -100,7 +100,7 @@ try {
         deconnexion($co);
         ?>
 
-        <form action="is_valid_end.php" method="post" >
+        <form action="profil/is_valid_end.php" method="post" >
             <input class="form-control" placeholder="Entrer la phrase de décodage" type="text" name="pass" required /><br>
             <input type="submit" value="Envoyer" class="float-end btn btn-primary">
 

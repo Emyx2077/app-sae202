@@ -18,7 +18,7 @@ if (!empty($_SESSION['erreur'])) {
     unset ($_SESSION['success']);
 }
 
-echo '<form action="join_activity.php" method="post">
+echo '<form action="ateliers/join_activity.php" method="post">
                     <input class="form-control" max="999" placeholder="A côté de la porte (ex 205)" type="number" name="roomCode" required/><br>
                     <input type="submit" value="Envoyer" class="btn btn-primary float-end">
                 </form>';
@@ -35,7 +35,7 @@ echo '</div>';
         unset ($_SESSION['promo']);
     }
 
-        echo '<form action="ssh_hidden.php" method="post">
+        echo '<form action="ateliers/ssh_hidden.php" method="post">
                     <input class="form-control" max="999" placeholder="Offre promotionnel" type="text" name="promo" required/><br>
                     <input type="submit" value="Envoyer" class="btn btn-primary float-end">
                 </form>';
@@ -47,7 +47,7 @@ echo '</div>';
     <div class="bg-light m-5 mt-5 p-5 border rounded mh-10" style="max-width: 350px; height : 250px;">
         <h3 class="mb-4 text-center text-black">Valider l'indice</h3>
 
-        <form action="../profil/is_valid.php" method="post">
+        <form action="profil/is_valid.php" method="post">
             <input class="form-control" placeholder="Valider un indice" type="text" name="indice" required /><br>
             <input type="submit" value="Envoyer" class="float-end btn btn-primary">
         </form>

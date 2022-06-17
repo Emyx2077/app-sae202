@@ -18,7 +18,7 @@ if (!empty($_SESSION['erreur'])) {
     unset ($_SESSION['success']);
 }
 
-    echo '<form action="join_activity.php" method="post">
+    echo '<form action="ateliers/join_activity.php" method="post">
                     <input class="form-control" max="999" placeholder="A côté de la porte (ex 205)" type="number" name="roomCode" required/><br>
                     <input type="submit" value="Envoyer" class="btn btn-primary float-end">
            </form>';
@@ -50,7 +50,7 @@ if (!empty($_SESSION['erreur'])) {
                 echo '<br><br><p class="text-center">Indice : '.$resultat['hashHint'].'</p>';
 
             } else {
-                echo '<form action="portrait.php" method="post" enctype="multipart/form-data">
+                echo '<form action="ateliers/portrait.php" method="post" enctype="multipart/form-data">
                         <h3>Votre portrait robot</h3><br>
                         <div class="input-group mb-3 w-100">
                         <input type="file" class="form-control" id="inputGroupFile02" name="pic" required>
@@ -71,7 +71,7 @@ if (!empty($_SESSION['erreur'])) {
                 }
                 ?>
 
-            <form action="imposteur.php" method="post">
+            <form action="ateliers/imposteur.php" method="post">
                 <input class="form-control" placeholder="Qui est l'imposteur" type="text" name="imposteur" required /><br>
                 <input type="submit" value="Envoyer" class="btn float-end btn-primary" >
             </form>
@@ -83,7 +83,7 @@ if (!empty($_SESSION['erreur'])) {
         <div class="bg-light m-5 mt-5 p-5 border rounded mh-10" style="max-width: 350px; height : 250px;">
             <h3 class="mb-4 text-center text-black">Valider l'indice</h3>
 
-            <form action="../profil/is_valid.php" method="post">
+            <form action="profil/is_valid.php" method="post">
                 <input class="form-control" placeholder="Valider un indice" type="text" name="indice" required /><br>
                 <input type="submit" value="Envoyer" class="float-end btn btn-primary">
             </form>

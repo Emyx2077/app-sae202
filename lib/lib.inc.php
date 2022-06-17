@@ -263,11 +263,12 @@ function uploadPic($co, $imageType, $from, $path){
         die();
     }
 
-    $newImg = date("Y_m_d_H_i_s")."---".$_FILES["pic"]["name"];
-    $path .= $newImg;
+    $newImg = 'profil/img/'.date("Y_m_d_H_i_s")."---".$_FILES["pic"]["name"];
+    //$path .= $newImg;
+    //echo $newImg;
 
     if(is_uploaded_file($_FILES["pic"]["tmp_name"])) {
-        if(!move_uploaded_file($_FILES["pic"]["tmp_name"], $path)) {
+        if(!move_uploaded_file($_FILES["pic"]["tmp_name"], $newImg)) {
             echo '<p>L\image n\'a pas pu être sauvagardé</p>'."\n";
             die();
         }
