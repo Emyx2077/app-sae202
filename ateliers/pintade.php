@@ -26,7 +26,21 @@ echo '<form action="join_activity.php" method="post">
 echo '</div>';
 ?>
 
-<!--input code gagnant-->
+    <!--input code gagnant-->
+    <div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">
+        <h3 class="mb-4 text-center text-black">Pour les heureux gagnants</h3>
+        <?php
+        if (!empty($_SESSION['question'])) {
+            echo '<p>' . ucfirst($_SESSION['question']) . '</p>';
+            unset ($_SESSION['question']);
+        }
+
+        echo '<form action="question_gagnant.php" method="post">
+                    <input class="form-control" max="999" placeholder="Si vous avez gagnez" type="text" name="win" required/><br>
+                    <input type="submit" value="Envoyer" class="btn btn-primary float-end">
+                </form>';
+        echo '</div>';
+        ?>
 
 
     <!--Valider l'indice-->

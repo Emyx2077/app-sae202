@@ -5,7 +5,6 @@ $co = connexion();
 $promo = $_POST['promo'];
 
 $req = 'SELECT uploadNom FROM upload WHERE uploadNom = "sshHidden" AND uploadTeamCode = "'.$_SESSION['teamCode'].'"';
-echo $req;
 try {
     $resultat = $co->query($req);
 } catch (PDOException $e) {
