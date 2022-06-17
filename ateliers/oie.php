@@ -61,6 +61,16 @@ if (!empty($_SESSION['erreur'])) {
 
         </div>
 
+        <div class="bg-light m-5 mt-5 p-5 border rounded mh-10" style="max-width: 350px; height : 250px;">
+            <h3 class="mb-4 text-center text-black">[Bonus] Imposteur</h3>
+
+            <form action="imposteur.php" method="post">
+                <input class="form-control" placeholder="Qui est l'imposteur" type="text" name="imposteur" required /><br>
+                <input type="submit" value="Envoyer" class="float-end btn btn-primary">
+            </form>
+
+        </div>
+
 
         <!--Valider l'indice-->
         <div class="bg-light m-5 mt-5 p-5 border rounded mh-10" style="max-width: 350px; height : 250px;">

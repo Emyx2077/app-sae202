@@ -5,7 +5,7 @@ $co = connexion();
 $nom=$_POST['nom'];
 $hash=$_POST['hash'];
 
-$req = 'UPDATE suspect SET suspectNom="'.$nom.'", suspectHash ="'.$hash.'" WHERE suspectId=1;';
+$req = 'UPDATE suspect SET suspectNom="'.$nom.'" WHERE suspectId=1;';
 
 try {
     $resultat=$co->query($req); // exécuter la requête
