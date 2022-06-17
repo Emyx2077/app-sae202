@@ -41,7 +41,7 @@ function afficherUsers($mabd, $req) {
     try {
         $resultat = $mabd->query($req);
     } catch (PDOException $e) {
-        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
+        echo '<p>Erreur : '.$e->getMessage().'</p>';
         die();
     }
 
@@ -67,7 +67,7 @@ function afficherTeams($mabd, $req) {
     try {
         $resultat = $mabd->query($req);
     } catch (PDOException $e) {
-        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
+        echo '<p>Erreur : '.$e->getMessage().'</p>';
         die();
     }
 
@@ -105,7 +105,7 @@ function afficherKeys($mabd, $req) {
     try {
         $resultat = $mabd->query($req);
     } catch (PDOException $e) {
-        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
+        echo '<p>Erreur : '.$e->getMessage().'</p>';
         die();
     }
 
@@ -159,7 +159,7 @@ function showSuspect($mabd, $req){
     try {
         $resultat = $mabd->query($req);
     } catch (PDOException $e) {
-        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
+        echo '<p>Erreur : '.$e->getMessage().'</p>';
         die();
     }
 
@@ -178,7 +178,7 @@ function showRoom($mabd, $req){
     try {
         $resultat = $mabd->query($req);
     } catch (PDOException $e) {
-        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
+        echo '<p>Erreur : '.$e->getMessage().'</p>';
         die();
     }
 
@@ -290,32 +290,4 @@ function uploadPic($co, $imageType, $from, $path){
     }
 
     deconnexion($co);
-}
-
-
-function hashAccessTeam($mabd, $req) {
-
-    try {
-        $resultat = $mabd->query($req);
-    } catch (PDOException $e) {
-        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
-        die();
-    }
-
-    if ($lignes_resultat>0) {
-        echo '<table>'."\n";
-        echo '<thead><th>ID</th><th>Key</th><th>Code Salle</th><th>Indice</th></thead>';
-        while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
-            $hashKey .= $ligne['hashKey'];
-            echo '<tr>';
-            echo '<td>'.$ligne['hashId'].'</td>';
-            echo '<td>'.$ligne['hashKey'].'</td>';
-            echo '<td>'.$ligne['hashRoomCode'].'</td>';
-            echo '<td>'.$ligne['hashHint'].'</td>';
-            echo '</tr>';
-        }
-        echo '<tr><td colspan="4">'.$hashKey.'</td></tr>';
-        echo '</table>'."\n";
-    } else {
-        echo '<p>Pas de résultat !</p>'; }
 }
