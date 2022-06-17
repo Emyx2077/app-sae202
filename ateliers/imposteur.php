@@ -1,10 +1,10 @@
-<?php require 'lib/lib.inc.php';
+<?php require '../lib/lib.inc.php';
 
-$imposteur=sanitize($_POST['imposteur']);
+$imposteur=mb_strtolower(sanitize($_POST['imposteur']));
 
 $co=connexion();
 
-$req = 'SELECT * from teams WHERE teamCode="'.$teamCode.'";';
+$req = 'SELECT suspectNom FROM suspect WHERE suspectNom="'.$imposteur.'";';
 
 try {
     $resultat=$co->query($req); // exécuter la requête
@@ -16,9 +16,11 @@ try {
 $ligne=$resultat->rowCount();
 
 if ($ligne == 0){
-    $_SESSION['erreur'] = "Le code de la team est invalide";
-    header('location:join_team.php');
-    die();
+    $_SESSION['imposteur'] = "Mauvaise réponse !";
+} else {
+    $_SESSION['imposteur'] = "Bonne réponse !";
 }
 
-$resultat = $resultat->fetch(PDO::FETCH_ASSOC);
+deconnexion($co);
+
+header('location:oie.php');
