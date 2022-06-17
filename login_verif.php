@@ -1,6 +1,6 @@
 <?php require 'lib/lib.inc.php';
 
-//$prenom=sanitize($_POST['prenom']);
+
 $mail=sanitize($_POST['mail']);
 $password=$_POST['password'];
 
@@ -11,8 +11,6 @@ $req='SELECT * FROM users
         LEFT JOIN teams
         ON teams.teamId=users.userTeamId
         WHERE userMail="'.$mail.'";';
-
-echo $req;
 
 try {
     $resultat=$co->query($req); // exécuter la requête
