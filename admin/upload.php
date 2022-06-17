@@ -6,8 +6,10 @@ $co = connexion();
 
 $req = 'SELECT * FROM upload INNER JOIN teams ON upload.uploadTeamCode = teams.teamCode WHERE upload.uploadNom = "groupPic";';
 
-echo '<h3>Les images des joueurs</h3>';
+echo '<div class="bg-light m-5 p-5 border rounded mh-10 d-flex flex-column align-items-center">';
+    echo '<h3>Les images des joueurs</h3>';
 
-showUploads($co, $req);
+    showUploads($co, $req);
+echo '</div>';
 
-deconnexion($co);
+require '../end.php';

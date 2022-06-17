@@ -135,7 +135,7 @@ function showUploads($mabd, $req) {
     try {
         $resultat = $mabd->query($req);
     } catch (PDOException $e) {
-        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
+        echo '<p>Erreur : '.$e->getMessage().'</p>';
         die();
     }
 
@@ -172,6 +172,26 @@ function showSuspect($mabd, $req){
             echo '<td>'.$ligne['suspectHash'].'</td>';
             echo '</tr>';
         echo '</table>'."\n";
+}
+
+function showRoom($mabd, $req){
+    try {
+        $resultat = $mabd->query($req);
+    } catch (PDOException $e) {
+        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
+        die();
+    }
+
+    echo '<table>'."\n";
+    echo '<thead><th>ID</th><th>Code</th><th>Team Cap</th></thead>';
+    while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
+        echo '<tr>';
+        echo '<td>' . $ligne['roomId'] . '</td>';
+        echo '<td>' . $ligne['roomCode'] . '</td>';
+        echo '<td>' . $ligne['roomMaxTeam'] . '</td>';
+        echo '</tr>';
+    }
+    echo '</table>' . "\n";
 }
 
 function showTeamImg($co){
@@ -270,4 +290,32 @@ function uploadPic($co, $imageType, $from, $path){
     }
 
     deconnexion($co);
+}
+
+
+function hashAccessTeam($mabd, $req) {
+
+    try {
+        $resultat = $mabd->query($req);
+    } catch (PDOException $e) {
+        echo '<p>Erreur : '.$e->getMessage().'</p>'; die();
+        die();
+    }
+
+    if ($lignes_resultat>0) {
+        echo '<table>'."\n";
+        echo '<thead><th>ID</th><th>Key</th><th>Code Salle</th><th>Indice</th></thead>';
+        while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
+            $hashKey .= $ligne['hashKey'];
+            echo '<tr>';
+            echo '<td>'.$ligne['hashId'].'</td>';
+            echo '<td>'.$ligne['hashKey'].'</td>';
+            echo '<td>'.$ligne['hashRoomCode'].'</td>';
+            echo '<td>'.$ligne['hashHint'].'</td>';
+            echo '</tr>';
+        }
+        echo '<tr><td colspan="4">'.$hashKey.'</td></tr>';
+        echo '</table>'."\n";
+    } else {
+        echo '<p>Pas de résultat !</p>'; }
 }
