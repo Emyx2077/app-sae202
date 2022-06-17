@@ -22,13 +22,6 @@ function getRoomNb(){
             //log la mouette
             if (data[201] !== undefined){
                 mouette.innerText = data[201]
-                if (data[201] >= 5) {
-                    mouette.closest('a').addEventListener("click", (e) => {
-                        e.preventDefault()
-                    });
-                } else {
-                    
-                }
             } else {
                 mouette.innerText = '0'
             }
@@ -42,14 +35,14 @@ function getRoomNb(){
 
             //log le pingouin
             if (data[205] !== undefined){
-            pingouin.innerText = data[205]
+                pingouin.innerText = data[205]
             } else {
                 pingouin.innerText = '0'
             }
 
             //log la pintade
             if (data[17] !== undefined){
-            pintade.innerText = data[17]
+                pintade.innerText = data[17]
             } else {
                 pintade.innerText = '0'
             }

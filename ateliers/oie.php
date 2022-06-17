@@ -26,7 +26,7 @@ if (!empty($_SESSION['erreur'])) {
 
 ?>
 
-        <div class="bg-light mt-5 m-2 p-5 border rounded w-25" style="min-width: 400px; max-height: 350px">
+        <div class="bg-light mt-5 m-2 p-5 border rounded w-25" style="min-width: 400px; max-height: 390px">
 
             <?php
             $path = showRobotImg($co);
