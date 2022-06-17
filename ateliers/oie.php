@@ -32,8 +32,22 @@ if (!empty($_SESSION['erreur'])) {
             $path = showRobotImg($co);
 
             if (!empty($path)) {
-            echo '<h3 class="text-center">Votre Portrait robot</h3><br>';
-            echo '<a href="img/'.$path.'"><img class="img-thumbnail" style="width :200px" src="img/'.$path.'"></a>';
+                echo '<h3 class="text-center">Votre Portrait robot</h3><br>';
+                echo '<a href="img/'.$path.'"><img class="img-thumbnail" style="width :200px" src="img/'.$path.'"></a>';
+
+                $req = 'SELECT hashHint from hash WHERE hashRoomCode=9;';
+
+                try {
+                    $resultat=$co->query($req); // exécuter la requête
+                } catch (PDOException $e) {
+                    print "Erreur : ".$e->getMessage().'<br />';
+                    die();
+                }
+
+                $resultat = $resultat->fetch(PDO::FETCH_ASSOC);
+
+                echo '<br><br><p class="text-center">Indice : '.$resultat['hashHint'].'</p>';
+
             } else {
                 echo '<form action="portrait.php" method="post" enctype="multipart/form-data">
                         <h3>Votre portrait robot</h3><br>
