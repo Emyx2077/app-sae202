@@ -28,7 +28,7 @@ table, th, td {
   max-height: 100%;
 }
 
-.piaf img:hover {
+.piaf:hover img {
   filter: hue-rotate(300deg);
 }
 
@@ -38,7 +38,8 @@ table, th, td {
 }
 
 .text-piaf {
-  background-color: darkslateblue;
+  background: rgb(100, 106, 211);
+  background: linear-gradient(216deg, rgb(100, 106, 211) 0%, rgb(130, 53, 166) 77%);
   border-radius: 20px;
 }
 

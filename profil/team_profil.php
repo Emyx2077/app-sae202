@@ -57,12 +57,12 @@ try {
         $hashkeys = null;
 
         if ($lignes_resultat>0) {
-            echo '<ol class="list-group list-group-numbered">';
+            echo '<ul class="list-group">';
             while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
                 $hashkeys .= $ligne['hashKey'];
-                echo '<li class="list-group-item rounded m-1">'.$ligne['hashKey'].'</li><br>';
+                echo '<li class="list-group-item rounded m-1 text-center">'.$ligne['hashKey'].'</li><br>';
             }
-            echo '</ol>';
+            echo '</ul>';
         } else {
             echo '<p>Aucune clé découverte pour le moment</p>'; }
 
@@ -83,15 +83,15 @@ try {
 
     </div>
 
-    <div class="bg-light m-2 mt-5 p-5 border rounded mh-10" style="min-width: 400px; max-height: 440px;">
+    <div class="bg-light m-2 mt-5 p-5 border rounded mh-10" style="width: 400px; max-height: 440px;">
         <h3 class="mb-4 text-center">Déchiffrement final</h3>
 
         <?php
-        echo '<p class="text-center">La clé encodée : <br><strong>'.$hashkeys.'</strong></p>';
+        echo '<p class="text-center">La clé encodée : <br><strong style="overflow-wrap: break-word;">'.$hashkeys.'</strong></p>';
 
         if (!empty($_SESSION['uncode'])) {
             teamFinishing($co, $teamCode);
-            echo '<p class="text-success">Bravo vous avez trouvez la phrase final !<br>Vous avez fini l\'aventure !<br></p>
+            echo '<p class="text-success">Bravo vous avez fini l\'aventure !<br></p>
                     <p class="text-center">La phrase finale : <br><strong>'.$_SESSION['uncode'].'</strong></p>';
         } else {
             echo '<p class="text-danger">'.'Cela ne semble pas être la bonne clé'.'</p>';
