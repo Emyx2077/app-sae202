@@ -7,7 +7,8 @@ $teamCode = $_SESSION['teamCode'];
 echo '<h1 class="text-center text-white mt-4">Bienvenue dans le royaume du Pingouin</h1>';
 
 echo '<div class="d-flex flex-column align-items-center">
-        <div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">';
+        <div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">
+        <h3 class="mb-4 text-center text-black">Code de la salle</h3>';
 
 if (!empty($_SESSION['erreur'])) {
     echo '<p class="text-danger">'.ucfirst($_SESSION['erreur']).'</p>';
@@ -18,14 +19,28 @@ if (!empty($_SESSION['erreur'])) {
 }
 
 echo '<form action="join_activity.php" method="post">
-                    <input class="form-control" max="999" placeholder="Code la salle (à l\'entrée ex 205)" type="number" name="roomCode" required/><br>
+                    <input class="form-control" max="999" placeholder="A côté de la porte (ex 205)" type="number" name="roomCode" required/><br>
                     <input type="submit" value="Envoyer" class="btn btn-primary float-end">
                 </form>';
 
 echo '</div>';
 ?>
 
+    <!--input mot caché ssh-->
+    <div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">
+        <h3 class="mb-4 text-center text-black">Black Friday</h3>
+    <?php
+    if (!empty($_SESSION['promo'])) {
+        echo '<p>' . ucfirst($_SESSION['promo']) . '</p>';
+        unset ($_SESSION['promo']);
+    }
 
+        echo '<form action="ssh_hidden.php" method="post">
+                    <input class="form-control" max="999" placeholder="Offre promotionnel" type="text" name="promo" required/><br>
+                    <input type="submit" value="Envoyer" class="btn btn-primary float-end">
+                </form>';
+    echo '</div>';
+    ?>
 
 
     <!--Valider l'indice-->
