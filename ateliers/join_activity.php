@@ -5,7 +5,15 @@ $co = connexion();
 
 $teamCode = $_SESSION['teamCode'];
 $roomCode = sanitize($_POST['roomCode']);
-$roomCode = str_replace('h, 0', $roomCode);
+
+//remplacer le code salle par le principale si l'équipe rentre une secondaire, et enlever les 0
+$roomCode = str_replace(0, '', $roomCode);
+$roomCode = str_replace(6, 9, $roomCode);
+$roomCode = str_replace(5, 9, $roomCode);
+$roomCode = str_replace(8, 7, $roomCode);
+
+
+echo $roomCode;
 
 //on check si le code existe
 $req = 'SELECT * from room WHERE roomCode = "'.$roomCode.'";';
