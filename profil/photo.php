@@ -1,12 +1,12 @@
 <?php require'../head.php';
 
-/*var_dump($_SESSION);
-var_dump($_FILES);*/
-
 $co = connexion();
 
 $imageType=$_FILES["pic"]["type"];
 
-uploadPic($co, $imageType);
+$from = 'groupPic';
+$path = "img/";
+
+uploadPic($co, $imageType, $from, $path);
 
 header('location:team_profil.php');

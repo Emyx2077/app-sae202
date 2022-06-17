@@ -176,11 +176,27 @@ function showSuspect($mabd, $req){
 
 function showTeamImg($co){
 
-    $req = 'SELECT uploadImg FROM upload WHERE uploadTeamCode = "'.$_SESSION['teamCode'].'";';
+    $req = 'SELECT uploadImg FROM upload WHERE uploadTeamCode = "'.$_SESSION['teamCode'].'" AND uploadNom = "groupPic";';
 
     try {
         $resultat=$co->query($req); // exécuter la requête
-        $lignes_resultat = $resultat->rowCount();
+    } catch (PDOException $e) {
+        print "Erreur : ".$e->getMessage().'<br />';
+        die();
+    }
+
+    $resultat = $resultat->fetch(PDO::FETCH_ASSOC);
+
+    if (!empty($resultat)){
+        return $resultat['uploadImg'];
+    }
+}
+
+function showRobotImg($co){
+    $req = 'SELECT uploadImg FROM upload WHERE uploadTeamCode = "'.$_SESSION['teamCode'].'" AND uploadNom = "robotPic";';
+
+    try {
+        $resultat=$co->query($req); // exécuter la requête
     } catch (PDOException $e) {
         print "Erreur : ".$e->getMessage().'<br />';
         die();
@@ -217,7 +233,7 @@ function deleteTeamInprogress($co, $teamCode){
     }
 }
 
-function uploadPic($co, $imageType){
+function uploadPic($co, $imageType, $from, $path){
     if ( ($imageType != "image/png") &&
         ($imageType != "image/jpg") &&
         ($imageType != "image/jpeg") ) {
@@ -228,9 +244,10 @@ function uploadPic($co, $imageType){
     }
 
     $newImg = date("Y_m_d_H_i_s")."---".$_FILES["pic"]["name"];
+    $path .= $newImg;
 
     if(is_uploaded_file($_FILES["pic"]["tmp_name"])) {
-        if(!move_uploaded_file($_FILES["pic"]["tmp_name"], "img/".$newImg)) {
+        if(!move_uploaded_file($_FILES["pic"]["tmp_name"], $path)) {
             echo '<p>L\image n\'a pas pu être sauvagardé</p>'."\n";
             die();
         }
@@ -243,7 +260,7 @@ function uploadPic($co, $imageType){
 
     $_SESSION['picPath'] = $newImg;
 
-    $req = 'INSERT INTO upload (uploadNom, uploadTeamCode, uploadImg) VALUES ("groupPic", "'.$_SESSION['teamCode'].'", "'.$newImg.'");';
+    $req = 'INSERT INTO upload (uploadNom, uploadTeamCode, uploadImg) VALUES ("'.$from.'", "'.$_SESSION['teamCode'].'", "'.$newImg.'");';
 
     try {
         $resultat=$co->query($req); // exécuter la requête
