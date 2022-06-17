@@ -39,6 +39,6 @@ echo '<div class="d-flex flex-column align-items-center">
 
         </div>
 
-</div
+</div>
 
 <?php require '../end.php'; ?>

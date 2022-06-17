@@ -22,7 +22,8 @@ if (!empty($_SESSION['erreur'])) {
                     <input type="submit" value="Envoyer" class="btn btn-primary float-end">
            </form>';
 
-echo '</div>';
+    echo '</div>';
+
 ?>
 
         <div class="bg-light mt-5 m-2 p-5 border rounded w-25" style="min-width: 400px; max-height: 350px">
@@ -47,6 +48,6 @@ echo '</div>';
 
         </div>
 
-    </div
+    </div>
 
 <?php require '../end.php'; ?>
