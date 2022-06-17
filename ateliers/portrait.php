@@ -5,8 +5,7 @@ $co = connexion();
 $imageType=$_FILES["pic"]["type"];
 
 $from = 'robotPic';
-$path = "img/";
 
-uploadPic($co, $imageType, $from, $path);
+uploadPic($co, $imageType, $from);
 
 header('location:oie.php');

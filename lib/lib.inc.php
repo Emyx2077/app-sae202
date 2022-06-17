@@ -82,7 +82,7 @@ function afficherTeams($mabd, $req) {
             echo '<td>'.$ligne['teamLvl'].'</td>';
             echo '<td>'.$ligne['teamNbPlayers'].'</td>';
             echo '<td>'.$ligne['teamCode'].'</td>';
-            echo '<td><a href="team.php?id='.$ligne['teamId'].'">Voir plus</a></td>';
+            echo '<td><a href="admin/team.php?id='.$ligne['teamId'].'">Voir plus</a></td>';
             echo '</tr>';
         }
         echo '</table>'."\n";
@@ -253,7 +253,7 @@ function deleteTeamInprogress($co, $teamCode){
     }
 }
 
-function uploadPic($co, $imageType, $from, $path){
+function uploadPic($co, $imageType, $from){
     if ( ($imageType != "image/png") &&
         ($imageType != "image/jpg") &&
         ($imageType != "image/jpeg") ) {
@@ -263,9 +263,9 @@ function uploadPic($co, $imageType, $from, $path){
         die();
     }
 
-    $newImg = 'profil/img/'.date("Y_m_d_H_i_s")."---".$_FILES["pic"]["name"];
+    $newImg = "../profil/img/".date("Y_m_d_H_i_s")."---".$_FILES["pic"]["name"];
+    $path = "profil/img/".date("Y_m_d_H_i_s")."---".$_FILES["pic"]["name"];
     //$path .= $newImg;
-    //echo $newImg;
 
     if(is_uploaded_file($_FILES["pic"]["tmp_name"])) {
         if(!move_uploaded_file($_FILES["pic"]["tmp_name"], $newImg)) {
@@ -281,7 +281,7 @@ function uploadPic($co, $imageType, $from, $path){
 
     $_SESSION['picPath'] = $newImg;
 
-    $req = 'INSERT INTO upload (uploadNom, uploadTeamCode, uploadImg) VALUES ("'.$from.'", "'.$_SESSION['teamCode'].'", "'.$newImg.'");';
+    $req = 'INSERT INTO upload (uploadNom, uploadTeamCode, uploadImg) VALUES ("'.$from.'", "'.$_SESSION['teamCode'].'", "'.$path.'");';
 
     try {
         $resultat=$co->query($req); // exécuter la requête

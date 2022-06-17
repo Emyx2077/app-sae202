@@ -5,8 +5,7 @@ $co = connexion();
 $imageType=$_FILES["pic"]["type"];
 
 $from = 'groupPic';
-$path = "img/";
 
-uploadPic($co, $imageType, $from, $path);
+uploadPic($co, $imageType, $from);
 
-//header('location:team_profil.php');
+header('location:team_profil.php');

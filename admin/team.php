@@ -42,10 +42,10 @@ echo '<div class="bg-light m-5 p-5 border rounded mh-10 d-flex flex-column align
 
     $pathTeam = showTeamImg($co);
     echo '<p class="text-center">Photo de l’équipe : </p>';
-    echo '<a href="../profil/img/'.$pathTeam.'"><img class="img-thumbnail" style="width :200px" src="../profil/img/'.$pathTeam.'"></a><br>';
+    echo '<a href="'.$pathTeam.'"><img class="img-thumbnail" style="width :200px" src="'.$pathTeam.'"></a><br>';
     $pathRobot = showRobotImg($co);
     echo '<p class="text-center">Portrait robot : </p>';
-    echo '<a href="../ateliers/img/'.$pathRobot.'"><img class="img-thumbnail" style="width :200px" src="../ateliers/img/'.$pathRobot.'"></a><br>';
+    echo '<a href="'.$pathRobot.'"><img class="img-thumbnail" style="width :200px" src="'.$pathRobot.'"></a><br>';
 
     //afficher tout les user
     while($user = $resultatUsers->fetch(PDO::FETCH_ASSOC)) {

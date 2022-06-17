@@ -29,7 +29,7 @@ try {
 
         if (!empty($path)) {
             echo '<h3 class="text-center">Votre photo d\'équipe</h3><br>';
-            echo '<a href="profil/img/'.$path.'"><img class="img-thumbnail" style="width :200px" src="img/'.$path.'"></a>';
+            echo '<a href="'.$path.'"><img class="img-thumbnail" style="width :200px" src="'.$path.'"></a>';
         } else {
 
 
