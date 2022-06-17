@@ -37,4 +37,6 @@ for ($i=0 ; $i< $size; $i++) {
     }
 }
 
+deconnexion($co);
+
 header('location:keys.php');

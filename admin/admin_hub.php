@@ -11,6 +11,8 @@
 <div class="d-flex flex-column align-items-center" style="margin-top: 100px">
     <a class="btn btn-primary m-2 btn-lg" href="teams.php">Teams</a>
     <br>
+    <a class="btn btn-primary m-2 btn-lg" href="users.php">Users (all)</a>
+    <br>
     <a class="btn btn-primary m-2 btn-lg" href="upload.php">Upload global</a>
     <br>
     <a class="btn btn-primary m-2 btn-lg" href="keys.php">Gérer les clés</a>

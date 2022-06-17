@@ -23,18 +23,5 @@ while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
 $a = array_count_values($roomCode2);
 echo json_encode($a);
 
-
-//print_r($a);
-
-/*print_r($a);
-$keys = array_keys($a);
-
-$count = count($keys);
-
-for ($i = 0; $i < $count; $i++){
-    if ($a[$keys[$i]] >= 5){
-        //print_r($a);
-        //ça sors la salle qui depasse 5, faire une req ou jsp pour la bloquer
-    }
-}*/
+deconnexion($co);
 

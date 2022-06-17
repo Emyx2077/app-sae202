@@ -14,4 +14,6 @@ try {
     die();
 }
 
+deconnexion($co);
+
 header('location:imposteur.php');

@@ -79,10 +79,11 @@ if (!empty($resultat['roomCode'])) {
             echo '<p>Erreur : ' . $e->getMessage() . '</p>';
             die();
         }
-
+        deconnexion($co);
         $_SESSION['success'] = "Bienvenue";
         header('location:../board.php');
 } else {
+    deconnexion($co);
     $_SESSION['erreur'] = "Code salle inconnu";
     header('location:../board.php');
 }

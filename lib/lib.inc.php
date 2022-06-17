@@ -48,7 +48,7 @@ function afficherUsers($mabd, $req) {
     $lignes_resultat = $resultat->rowCount();
     if ($lignes_resultat>0) {
         echo '<table>'."\n";
-        echo '<thead><th>ID User</th><th>Prenom</th><th>Nom</th><th>ID Team</th></thead>';
+        echo '<thead><th>ID</th><th>Prenom</th><th>Nom</th><th>ID Team</th></thead>';
         while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
             echo '<tr>';
             echo '<td>'.$ligne['userId'].'</td>';

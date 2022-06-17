@@ -47,6 +47,8 @@ echo '<p class="text-center">Portrait robot : </p>';
 }
 
     echo '</div>';
+
+deconnexion($co);
 require '../end.php';
 
 
