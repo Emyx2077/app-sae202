@@ -4,7 +4,7 @@ require'../head.php';
 $co = connexion();
 $teamCode = $_SESSION['teamCode'];
 
-echo '<h1 class="text-center text-white mt-4">Bienvenue dans le royaume de la mouette</h1>';
+echo '<h1 class="text-center text-white mt-4">Bienvenue dans le royaume de la Mouette</h1>';
 
 echo '<div class="d-flex flex-column align-items-center">
         <div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">';
@@ -18,7 +18,7 @@ echo '<div class="d-flex flex-column align-items-center">
         }
 
         echo '<form action="join_activity.php" method="post">
-                    <input class="form-control" max="999" placeholder="Code la salle (à l\'entrée ex 009)" type="number" name="roomCode" required/><br>
+                    <input class="form-control" max="999" placeholder="Code la salle (à l\'entrée ex 205)" type="number" name="roomCode" required/><br>
                     <input type="submit" value="Envoyer" class="btn btn-primary float-end">
                 </form>';
 
