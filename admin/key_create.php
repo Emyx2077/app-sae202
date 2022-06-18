@@ -9,9 +9,14 @@ if (!empty($_SESSION['erreur'])) {
 
 ?>
 
-<form action="admin/encode.php" method="POST">
-    La phrase final qu'il faudra trouver <input type="text" name="finalSentence" required/><br>
-    la phrase qui servira en encoder (vigenere) <input type="text" name="keyPass" required/><br>
-    nombre de salle/indices a donner <input type="text" name="nb" required/><br>
-    <input type="submit" value="Envoyer">
+<div class="bg-light m-5 p-5 border rounded mh-10 d-flex flex-column align-items-center">
+    <h3>Clé actuel</h3>
+
+<form action="admin/encode.php" method="POST" class="w-50">
+    <input class="form-control" placeholder="La phrase final qu'il faudra trouver " type="text" name="finalSentence" required/><br>
+    <input class="form-control" placeholder="La phrase qui servira en encoder" type="text" name="keyPass" required/><br>
+    <input class="form-control" placeholder="Nombre de salles/indices a donner" type="text" name="nb" required/><br>
+    <input type="submit" value="Envoyer" class="btn btn-primary float-end">
 </form>
+
+</div>

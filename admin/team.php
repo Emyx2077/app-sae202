@@ -54,7 +54,7 @@ echo '<div class="bg-light m-5 p-5 border rounded mh-10 d-flex flex-column align
             echo 'Prenom : '.$user['userPrenom'].'<br>';
             echo 'Nom : '.$user['userNom'].'<br>';
 
-            echo '<a href="user.php?id='.$user['userId'].'">Voir plus</a><br><br>';
+            echo '<a href="admin/user.php?id='.$user['userId'].'">Voir plus</a><br><br>';
         echo '<div>';
 
 }

@@ -48,7 +48,7 @@ function afficherUsers($mabd, $req) {
     $lignes_resultat = $resultat->rowCount();
     if ($lignes_resultat>0) {
         echo '<table>'."\n";
-        echo '<thead><th>ID</th><th>Prenom</th><th>Nom</th><th>ID Team</th></thead>';
+        echo '<thead><th>ID / </th><th>Prenom / </th><th>Nom / </th><th>ID Team / </th></thead>';
         while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
             echo '<tr>';
             echo '<td>'.$ligne['userId'].'</td>';
@@ -74,13 +74,12 @@ function afficherTeams($mabd, $req) {
     $lignes_resultat = $resultat->rowCount();
     if ($lignes_resultat>0) {
         echo '<table>'."\n";
-        echo '<thead><th>Team id</th><th>Team Nom</th><th>Team lvl</th><th>Team nb players</th><th>team code</th><th>Info team</th></thead>';
+        echo '<thead><th>Team id / </th><th>Team Nom / </th><th>Team lvl / </th><th>team code / </th><th>Info team / </th></thead>';
         while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
             echo '<tr>';
             echo '<td>'.$ligne['teamId'].'</td>';
             echo '<td>'.$ligne['teamNom'].'</td>';
             echo '<td>'.$ligne['teamLvl'].'</td>';
-            echo '<td>'.$ligne['teamNbPlayers'].'</td>';
             echo '<td>'.$ligne['teamCode'].'</td>';
             echo '<td><a href="admin/team.php?id='.$ligne['teamId'].'">Voir plus</a></td>';
             echo '</tr>';

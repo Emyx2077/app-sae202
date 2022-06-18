@@ -81,18 +81,18 @@ echo '</div>';
         </div>
 
         <div class="bg-light m-5 mt-5 p-5 border rounded mh-10" style="max-width: 350px; height : 280px;">
-            <h3 class="mb-4 text-center text-black">[Bonus] Imposteur</h3>
+            <h3 class="mb-4 text-center text-black">Imposteur</h3>
 
             <?php
                 if (!empty($_SESSION['imposteur'])) {
                 echo '<p>'.ucfirst($_SESSION['imposteur']).'</p>';
+                } else {
+                    echo '<form action="ateliers/imposteur.php" method="post">
+                            <input class="form-control" placeholder="Qui est l\'imposteur" type="text" name="imposteur" required /><br>
+                            <input type="submit" value="Envoyer" class="btn float-end btn-primary" >
+                           </form>';
                 }
                 ?>
-
-            <form action="ateliers/imposteur.php" method="post">
-                <input class="form-control" placeholder="Qui est l'imposteur" type="text" name="imposteur" required /><br>
-                <input type="submit" value="Envoyer" class="btn float-end btn-primary" >
-            </form>
 
         </div>
 
