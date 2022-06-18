@@ -7,17 +7,18 @@ $teamCode = $_SESSION['teamCode'];
 $roomCode = sanitize($_POST['roomCode']);
 
 //remplacer le code salle par le principale si l'équipe rentre une secondaire, et enlever les 0
-$roomCode = str_replace(0, '', $roomCode);
-$roomCode = str_replace(6, 9, $roomCode);
-$roomCode = str_replace(5, 9, $roomCode);
-$roomCode = str_replace(8, 7, $roomCode);
 
-
+if (($roomCode != '205') && ($roomCode != '201')) {
+    $roomCode = str_replace(0, '', $roomCode);
+    $roomCode = str_replace(6, 9, $roomCode);
+    $roomCode = str_replace(5, 9, $roomCode);
+    $roomCode = str_replace(8, 7, $roomCode);
+}
 echo $roomCode;
+
 
 //on check si le code existe
 $req = 'SELECT * from room WHERE roomCode = "'.$roomCode.'";';
-
 
 try {
     $resultat = $co->query($req);
@@ -32,7 +33,6 @@ $maxTeams = $resultat['roomMaxTeam'];
 if (!empty($resultat['roomCode'])) {
     //on check si il reste de la place dans la salle en question
     $req = 'SELECT inprogressRoomCode FROM inprogress WHERE inprogressRoomCode="'.$roomCode.'";';
-    echo $req;
 
     try {
         $resultat = $co->query($req);

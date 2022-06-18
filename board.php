@@ -5,6 +5,11 @@ if(empty($_SESSION['userId'])){
     header('location:index.php');
 }
 
+if (!empty($_SESSION['board'])){
+    echo '<div class="bg-light m-5 p-2 border rounded "><h2 class="text-danger text-center">'.$_SESSION['board'].'</h2></div>';
+    unset($_SESSION['board']);
+}
+
 ?>
 
 <div class="d-flex flex-column flex-lg-row align-items-center justify-content-around" style="margin-top: 100px">
@@ -62,6 +67,6 @@ if(empty($_SESSION['userId'])){
 </div>
 
 
-<script src="js/get.js"></script>
+<script src="js/getRoomStatus.js"></script>
 
 <?php require 'end.php'; ?>
