@@ -228,16 +228,29 @@ function showRobotImg($co){
     }
 }
 
-function teamFinishing($co, $code){
+function teamFinishing($co, $teamCode){
     $date = date('H:i:s');
 
-    $req = 'INSERT INTO time (timeTeamCode, time)VALUES ("'.$code.'", "'.$date.'");';
+    $req = 'SELECT * FROM time WHERE timeTeamCode ="'.$teamCode.'";';
 
     try {
-        $co->query($req); // exécuter la requête
+        $resultat = $co->query($req); // exécuter la requête
     } catch (PDOException $e) {
         print "Erreur : ".$e->getMessage().'<br />';
         die();
+    }
+    $resultat = $resultat->fetch(PDO::FETCH_ASSOC);
+
+    if (empty($resultat)){
+
+        $req = 'INSERT INTO time (timeTeamCode, time)VALUES ("'.$teamCode.'", "'.$date.'");';
+
+        try {
+            $co->query($req); // exécuter la requête
+        } catch (PDOException $e) {
+            print "Erreur : ".$e->getMessage().'<br />';
+            die();
+        }
     }
 }
 
