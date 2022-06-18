@@ -231,7 +231,7 @@ function showRobotImg($co){
 function teamFinishing($co, $code){
     $date = date('H:i:s');
 
-    $req = 'INSERT INTO time (timeTeamId, time)VALUES ("'.$code.'", "'.$date.'");';
+    $req = 'INSERT INTO time (timeTeamCode, time)VALUES ("'.$code.'", "'.$date.'");';
 
     try {
         $co->query($req); // exécuter la requête
@@ -298,4 +298,29 @@ function lvlup($co, $teamCode){
         print "Erreur : ".$e->getMessage().'<br />';
         die();
     }
+}
+
+function leaderboard($mabd, $req) {
+
+    try {
+        $resultat = $mabd->query($req);
+    } catch (PDOException $e) {
+        echo '<p>Erreur : '.$e->getMessage().'</p>';
+        die();
+    }
+
+    $lignes_resultat = $resultat->rowCount();
+    if ($lignes_resultat>0) {
+        echo '<table>'."\n";
+        echo '<thead><th>Team Nom / </th><th>Team Temps / </th><th>Team Lvl / </th></thead>';
+        while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
+            echo '<tr>';
+            echo '<td>'.$ligne['teamNom'].'</td>';
+            echo '<td>'.$ligne['time'].'</td>';
+            echo '<td>'.$ligne['teamLvl'].'</td>';
+            echo '</tr>';
+        }
+        echo '</table>'."\n";
+    } else {
+        echo '<p>Pas de résultat !</p>'; }
 }

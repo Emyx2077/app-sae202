@@ -8,7 +8,7 @@
 
 ?>
 
-<div class="d-flex flex-column align-items-center" style="margin-top: 100px">
+<div class="d-flex flex-column align-items-center" style="margin-top: 80px">
     <a class="btn btn-primary m-2 btn-lg" href="admin/teams.php">Teams</a>
     <br>
     <a class="btn btn-primary m-2 btn-lg" href="admin/users.php">Users (all)</a>
@@ -20,6 +20,8 @@
     <a class="btn btn-primary m-2 btn-lg" href="admin/imposteur.php">L'imposteur</a>
     <br>
     <a class="btn btn-primary m-2 btn-lg" href="admin/room.php">Les salles</a>
+    <br>
+    <a class="btn btn-primary m-2 btn-lg" href="admin/leaderboard.php">Leaderboard</a>
 </div>
 
 <?php require '../end.php'; ?>
