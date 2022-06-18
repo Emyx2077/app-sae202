@@ -24,12 +24,14 @@ if (!empty($_SESSION['erreur'])) {
     unset ($_SESSION['success']);
 }
 
-    echo '<form action="ateliers/join_activity.php" method="post">
-                    <input class="form-control" max="999" placeholder="A côté de la porte (ex 205)" type="number" name="roomCode" required/><br>
-                    <input type="submit" value="Envoyer" class="btn btn-primary float-end">
-           </form>';
+echo '<p class="text-center"><span id="joinStatus" class=""></span></p>';
 
-    echo '</div>';
+echo '<form id="join">
+                    <input id="textArea" class="form-control" max="999" placeholder="A côté de la porte (ex 205)" type="number" name="roomCode" required/><br>
+                    <input type="submit" value="Envoyer" class="btn btn-primary float-end">
+                </form>';
+
+echo '</div>';
 
 ?>
 
@@ -97,5 +99,6 @@ if (!empty($_SESSION['erreur'])) {
         </div>
 
     </div>
+    <script src="js/join_activity.js"></script>
 
 <?php require '../end.php'; ?>
