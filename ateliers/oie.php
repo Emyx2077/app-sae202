@@ -10,19 +10,29 @@ if (empty($teamCode)){
     die();
 }
 
-echo '<h1 class="text-center text-white mt-4">Bienvenue dans le royaume de l\'Oie</h1>';
+echo '<h1 class="text-center text-white" style="margin: 100px 0px 50px 0px">Bienvenue dans le royaume de l\'Oie</h1>';
 
-echo '<div class="d-flex flex-column align-items-center">
-        <div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">
+echo '<div class="d-flex flex-column align-items-center">';
+
+?>
+
+    <div class="textAtelier rounded">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea esse labore laboriosam
+            obcaecati omnis saepe, vitae? A consequuntur, culpa enim eum iste magnam nostrum quasi
+            quis quos sint suscipit tenetur velit vero, voluptate voluptates? Culpa facere fugit incidunt
+            iure minus non odio rerum tempora! Consectetur possimus, tempora! Ab corporis debitis,
+            dolore dolores ea eaque, in ipsam ipsum quas, quasi saepe sequi? Dolore libero nisi
+            ratione reiciendis vel velit veritatis! A ad adipisci aperiam aspernatur atque blanditiis
+            cumque cupiditate dolor expedita explicabo iusto laboriosam maiores modi nam nesciunt
+            nostrum omnis quam quidem quo repellat sint tempora, totam voluptas! Explicabo, ipsa, reiciendis!
+        </p>
+    </div>
+
+<?php
+
+        echo '<div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">
         <h3 class="mb-4 text-center text-black">Code de la salle</h3>';
-
-if (!empty($_SESSION['erreur'])) {
-    echo '<p class="text-danger">'.ucfirst($_SESSION['erreur']).'</p>';
-    unset ($_SESSION['erreur']);
-}elseif (!empty($_SESSION['success'])){
-    echo '<p class="text-success">'.ucfirst($_SESSION['success']).'</p>';
-    unset ($_SESSION['success']);
-}
 
 echo '<p class="text-center"><span id="joinStatus" class=""></span></p>';
 

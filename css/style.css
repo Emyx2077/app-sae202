@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 ul {
   display: flex;
 }
@@ -20,12 +21,46 @@ table, td, th {
 }
 
 .piaf {
-  width: 200px;
+  width: 180px;
 }
 
 .piaf img {
+  animation-name: line;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
   max-width: 100%;
   max-height: 100%;
+}
+
+@keyframes line {
+  0% {
+    transform: translateY(5px) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.04);
+  }
+  100% {
+    transform: translateY(5px) scale(1);
+  }
+}
+#mouette {
+  animation-duration: 3500ms;
+}
+
+#poulet {
+  animation-duration: 4800ms;
+}
+
+#pintade {
+  animation-duration: 6000ms;
+}
+
+#pinguin {
+  animation-duration: 3000ms;
+}
+
+#oie {
+  animation-duration: 4200ms;
 }
 
 .piaf:hover img {
@@ -34,13 +69,34 @@ table, td, th {
 
 .background {
   height: 100vh;
-  background-image: url("../img/grid.jpeg");
+  background-image: url("../img/gridOld.jpeg");
+  background-size: cover;
 }
 
 .text-piaf {
   background: rgb(100, 106, 211);
   background: linear-gradient(216deg, rgb(100, 106, 211) 0%, rgb(130, 53, 166) 77%);
   border-radius: 20px;
+}
+
+.textAtelier {
+  background-color: rgba(250, 250, 250, 0.6);
+  width: 75%;
+  padding: 30px;
+}
+.textAtelier p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  line-height: 2em;
+  color: #000000;
+}
+
+#poulet {
+  transform: scaleX(-1);
+}
+
+h1 {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
