@@ -1,5 +1,5 @@
 <?php
-require'../head.php';
+require'../lib/lib.inc.php';
 
 $co = connexion();
 
@@ -14,7 +14,7 @@ if (($roomCode != '205') && ($roomCode != '201')) {
     $roomCode = str_replace(5, 9, $roomCode);
     $roomCode = str_replace(8, 7, $roomCode);
 }
-echo $roomCode;
+//echo $roomCode;
 
 
 //on check si le code existe
@@ -27,10 +27,12 @@ try {
     die();
 }
 $resultat = $resultat->fetch(PDO::FETCH_ASSOC);
-$maxTeams = $resultat['roomMaxTeam'];
+
 
 //si le code existe alors
 if (!empty($resultat['roomCode'])) {
+    $maxTeams = $resultat['roomMaxTeam'];
+
     //on check si il reste de la place dans la salle en question
     $req = 'SELECT inprogressRoomCode FROM inprogress WHERE inprogressRoomCode="'.$roomCode.'";';
 
@@ -46,8 +48,9 @@ if (!empty($resultat['roomCode'])) {
         $howMuch += 1;
     }
     if ($howMuch >= $maxTeams){
-        $_SESSION['erreur'] = "Salle rempli, veuillez allez dans une autre activité";
-        header('location:../board.php');
+        echo 3;
+        //$_SESSION['erreur'] = "Salle rempli, veuillez allez dans une autre activité";
+        //header('location:../board.php');
         die();
     }
 
@@ -80,10 +83,12 @@ if (!empty($resultat['roomCode'])) {
             die();
         }
         deconnexion($co);
-        $_SESSION['success'] = "Bienvenue";
-        header('location:../board.php');
+        echo 1;
+        //$_SESSION['success'] = "Bienvenue";
+        //header('location:../board.php');
 } else {
     deconnexion($co);
-    $_SESSION['erreur'] = "Code salle inconnu";
-    header('location:../board.php');
+    echo 0;
+    //$_SESSION['erreur'] = "Code salle inconnu";
+    //header('location:../board.php');
 }

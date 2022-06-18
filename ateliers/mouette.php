@@ -24,8 +24,10 @@ echo '<div class="d-flex flex-column align-items-center">
             unset ($_SESSION['success']);
         }
 
-        echo '<form action="ateliers/join_activity.php" method="post">
-                    <input class="form-control" max="999" placeholder="A côté de la porte (ex 205)" type="number" name="roomCode" required/><br>
+        echo '<p class="text-center"><span id="joinStatus" class=""></span></p>';
+
+        echo '<form id="join">
+                    <input id="textArea" class="form-control" max="999" placeholder="A côté de la porte (ex 205)" type="number" name="roomCode" required/><br>
                     <input type="submit" value="Envoyer" class="btn btn-primary float-end">
                 </form>';
 
@@ -47,5 +49,7 @@ echo '<div class="d-flex flex-column align-items-center">
         </div>
 
 </div>
+
+    <script src="js/join_activity.js"></script>
 
 <?php require '../end.php'; ?>
