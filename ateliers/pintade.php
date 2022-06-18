@@ -14,6 +14,19 @@ echo '<h1 class="text-center text-white" style="margin: 100px 0px 50px 0px">Bien
 
 echo '<div class="d-flex flex-column align-items-center">';
 
+
+
+        echo '<div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">
+        <h3 class="mb-4 text-center text-black">Code de la salle</h3>';
+
+echo '<p class="text-center"><span id="joinStatus" class=""></span></p>';
+
+echo '<form id="join">
+                    <input id="textArea" class="form-control" max="999" placeholder="A côté de la porte (ex 205)" type="number" name="roomCode" required/><br>
+                    <input type="submit" value="Envoyer" class="btn btn-primary float-end">
+                </form>';
+
+echo '</div>';
 ?>
 
     <div class="textAtelier rounded">
@@ -28,21 +41,6 @@ echo '<div class="d-flex flex-column align-items-center">';
             nostrum omnis quam quidem quo repellat sint tempora, totam voluptas! Explicabo, ipsa, reiciendis!
         </p>
     </div>
-
-<?php
-
-        echo '<div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">
-        <h3 class="mb-4 text-center text-black">Code de la salle</h3>';
-
-echo '<p class="text-center"><span id="joinStatus" class=""></span></p>';
-
-echo '<form id="join">
-                    <input id="textArea" class="form-control" max="999" placeholder="A côté de la porte (ex 205)" type="number" name="roomCode" required/><br>
-                    <input type="submit" value="Envoyer" class="btn btn-primary float-end">
-                </form>';
-
-echo '</div>';
-?>
 
     <!--input code gagnant-->
     <div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">

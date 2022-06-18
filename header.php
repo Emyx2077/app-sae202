@@ -3,8 +3,8 @@
 echo '<div class="dropdown m-2 fixed-top" style="z-index: 5; right: 20px;">';
 
 if (!empty($_SESSION['userId'])){
-    echo '<a type="button" class="btn btn-primary btn-lg me-2" href="board.php">Accueil</a>';
-    echo '<button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Bienvenue '. $_SESSION['userPrenom'].'</button><br>';
+    echo '<a type="button" class="btn btn-light btn-lg me-2" href="board.php">Accueil</a>';
+    echo '<button class="btn btn-light btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Bienvenue '. $_SESSION['userPrenom'].'</button><br>';
 }
 
 echo '<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';

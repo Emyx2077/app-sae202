@@ -1,1 +1,96 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 301.98 322.29"><defs><style>.c{fill:#7c313c;}.d{fill:#141026;}.e{fill:#b35646;}.f{fill:url(#b);}.g{fill:#d77666;}.h{fill:#aa3d36;}.i{fill:#db6955;}</style><linearGradient id="b" x1="150.99" y1="10.07" x2="150.99" y2="292.07" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d60b52"/><stop offset="1" stop-color="#2d2e83"/></linearGradient></defs><polygon class="f" points="291.91 171.24 271.77 151.1 291.91 130.93 271.77 110.79 271.77 90.64 191.36 10.07 171.21 10.07 151.07 30.21 151.07 50.36 171.21 70.5 151.07 90.64 151.07 130.93 130.93 151.07 110.79 151.07 90.64 130.93 70.5 130.93 50.36 110.79 30.21 110.79 10.07 130.93 10.07 151.07 30.21 171.21 10.07 191.36 10.07 211.5 70.5 271.93 90.64 271.93 110.79 292.07 130.93 271.93 151.07 292.07 231.64 292.07 231.64 271.96 251.79 271.96 271.93 251.81 291.91 231.67 291.91 211.53 291.91 191.38 291.91 171.24"/><rect class="d" x="241.71" y="60.43" width="20.14" height="20.14"/><rect class="d" x="221.57" y="40.29" width="20.14" height="20.14"/><rect class="d" x="201.43" y="20.14" width="20.14" height="20.14"/><rect class="d" x="181.29" width="20.14" height="20.14"/><rect class="d" x="161.14" width="20.14" height="20.14"/><rect class="d" x="141" y="20.14" width="20.14" height="20.14"/><rect class="d" x="141" y="40.29" width="20.14" height="20.14"/><rect class="d" x="161.14" y="60.43" width="20.14" height="20.14"/><rect class="d" x="181.29" y="60.43" width="20.14" height="20.14"/><rect class="d" x="141" y="80.57" width="20.14" height="20.14"/><rect class="d" x="141" y="100.71" width="20.14" height="20.14"/><rect class="d" x="141" y="120.86" width="20.14" height="20.14"/><rect class="d" x="120.86" y="141" width="20.14" height="20.14"/><rect class="d" x="100.71" y="141" width="20.14" height="20.14"/><rect class="d" x="80.57" y="120.86" width="20.14" height="20.14"/><rect class="d" x="60.43" y="120.86" width="20.14" height="20.14"/><rect class="d" x="40.29" y="100.71" width="20.14" height="20.14"/><rect class="d" x="20.14" y="100.71" width="20.14" height="20.14"/><rect class="d" y="120.86" width="20.14" height="20.14"/><rect class="d" y="141" width="20.14" height="20.14"/><rect class="d" x="20.14" y="161.14" width="20.14" height="20.14"/><rect class="d" y="181.29" width="20.14" height="20.14"/><rect class="d" y="201.43" width="20.14" height="20.14"/><rect class="d" x="20.14" y="221.57" width="20.14" height="20.14"/><rect class="d" x="40.29" y="241.71" width="20.14" height="20.14"/><rect class="d" x="60.43" y="261.86" width="20.14" height="20.14"/><rect class="d" x="80.57" y="261.86" width="20.14" height="20.14"/><rect class="d" x="120.86" y="282" width="20.14" height="20.14"/><rect class="d" x="120.86" y="302.14" width="20.14" height="20.14"/><rect class="d" x="100.71" y="282" width="20.14" height="20.14"/><rect class="d" x="141" y="282" width="20.14" height="20.14"/><rect class="d" x="161.14" y="282" width="20.14" height="20.14"/><rect class="d" x="181.29" y="282" width="20.14" height="20.14"/><rect class="d" x="201.43" y="282" width="20.14" height="20.14"/><rect class="d" x="221.57" y="282" width="20.14" height="20.14"/><rect class="d" x="160.39" y="302.14" width="20.14" height="20.14"/><rect class="d" x="180.54" y="302.14" width="20.14" height="20.14"/><rect class="d" x="221.57" y="302.14" width="20.14" height="20.14"/><rect class="d" x="221.57" y="261.88" width="20.14" height="20.14"/><rect class="d" x="241.71" y="261.88" width="20.14" height="20.14"/><rect class="d" x="261.86" y="241.74" width="20.14" height="20.14"/><rect class="d" x="281.84" y="221.6" width="20.14" height="20.14"/><rect class="d" x="281.84" y="201.46" width="20.14" height="20.14"/><rect class="d" x="281.84" y="181.31" width="20.14" height="20.14"/><rect class="d" x="281.84" y="161.17" width="20.14" height="20.14"/><rect class="d" x="261.7" y="141.03" width="20.14" height="20.14"/><rect class="d" x="241.55" y="141.03" width="20.14" height="20.14"/><rect class="d" x="281.84" y="120.86" width="20.14" height="20.14"/><rect class="d" x="261.7" y="100.71" width="20.14" height="20.14"/><rect class="d" x="261.7" y="80.57" width="20.14" height="20.14"/><rect class="d" x="201.35" y="120.86" width="20.14" height="20.14"/><rect class="d" x="201.35" y="100.71" width="20.14" height="20.14"/><rect class="d" x="60.43" y="221.57" width="20.14" height="20.14"/><rect class="d" x="60.43" y="201.43" width="20.14" height="20.14"/><rect class="d" x="60.43" y="181.29" width="20.14" height="20.14"/><rect class="d" x="80.57" y="181.29" width="20.14" height="20.14"/><rect class="d" x="80.57" y="221.57" width="20.14" height="20.14"/><rect class="d" x="100.71" y="221.57" width="20.14" height="20.14"/><rect class="d" x="120.86" y="221.57" width="20.14" height="20.14"/><rect class="d" x="141" y="221.57" width="20.14" height="20.14"/><rect class="d" x="161.14" y="200.81" width="20.14" height="20.14"/><rect class="i" x="261.7" y="120.86" width="20.14" height="20.14"/><rect class="e" x="241.71" y="120.86" width="20.14" height="20.14"/><rect class="h" x="221.57" y="60.43" width="20.14" height="20.14"/><rect class="h" x="201.35" y="40.29" width="20.14" height="20.14"/><rect class="h" x="181.29" y="20.14" width="20.14" height="20.14"/><rect class="g" x="181.29" y="40.29" width="20.14" height="20.14"/><rect class="c" x="161.14" y="20.14" width="20.14" height="20.14"/><rect class="c" x="161.14" y="40.29" width="20.14" height="20.14"/><rect class="c" x="201.35" y="60.43" width="20.14" height="20.14"/><rect class="c" x="181.29" y="40.29" width="20.14" height="20.14"/><rect class="h" x="201.05" y="302.14" width="20.14" height="20.14"/><rect class="h" x="140.62" y="302.14" width="20.14" height="20.14"/><rect class="d" x="120.86" y="261.86" width="20.14" height="20.14"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="a" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 302 322.3" style="enable-background:new 0 0 302 322.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#141026;}
+	.st2{fill:#DB6955;}
+	.st3{fill:#B35646;}
+	.st4{fill:#AA3D36;}
+	.st5{fill:#D77666;}
+	.st6{fill:#7C313C;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="150.99" y1="311.8198" x2="150.99" y2="29.8198" gradientTransform="matrix(-1 0 0 -1 301.98 321.8898)">
+	<stop  offset="0" style="stop-color:#D60B52"/>
+	<stop  offset="1" style="stop-color:#2D2E83"/>
+</linearGradient>
+<polygon class="st0" points="10.1,191.4 10.1,211.5 10.1,231.7 30,251.8 50.2,272 70.3,272 70.3,292.1 150.9,292.1 171,271.9 
+	191.2,292.1 211.3,271.9 231.5,271.9 291.9,211.5 291.9,191.4 271.8,171.2 291.9,151.1 291.9,130.9 271.8,110.8 251.6,110.8 
+	231.5,130.9 211.3,130.9 191.2,151.1 171,151.1 150.9,130.9 150.9,90.6 130.8,70.5 150.9,50.4 150.9,30.2 130.8,10.1 110.6,10.1 
+	30.2,90.6 30.2,110.8 10.1,130.9 30.2,151.1 10.1,171.2 "/>
+<rect x="40.1" y="60.4" class="st1" width="20.1" height="20.1"/>
+<rect x="60.3" y="40.3" class="st1" width="20.1" height="20.1"/>
+<rect x="80.4" y="20.1" class="st1" width="20.1" height="20.1"/>
+<rect x="100.5" y="0" class="st1" width="20.1" height="20.1"/>
+<rect x="120.7" y="0" class="st1" width="20.1" height="20.1"/>
+<rect x="140.8" y="20.1" class="st1" width="20.1" height="20.1"/>
+<rect x="140.8" y="40.3" class="st1" width="20.1" height="20.1"/>
+<rect x="120.7" y="60.4" class="st1" width="20.1" height="20.1"/>
+<rect x="100.5" y="60.4" class="st1" width="20.1" height="20.1"/>
+<rect x="140.8" y="80.6" class="st1" width="20.1" height="20.1"/>
+<rect x="140.8" y="100.7" class="st1" width="20.1" height="20.1"/>
+<rect x="140.8" y="120.9" class="st1" width="20.1" height="20.1"/>
+<rect x="161" y="141" class="st1" width="20.1" height="20.1"/>
+<rect x="181.1" y="141" class="st1" width="20.1" height="20.1"/>
+<rect x="201.3" y="120.9" class="st1" width="20.1" height="20.1"/>
+<rect x="221.4" y="120.9" class="st1" width="20.1" height="20.1"/>
+<rect x="241.5" y="100.7" class="st1" width="20.1" height="20.1"/>
+<rect x="261.7" y="100.7" class="st1" width="20.1" height="20.1"/>
+<rect x="281.8" y="120.9" class="st1" width="20.1" height="20.1"/>
+<rect x="281.8" y="141" class="st1" width="20.1" height="20.1"/>
+<rect x="261.7" y="161.1" class="st1" width="20.1" height="20.1"/>
+<rect x="281.8" y="181.3" class="st1" width="20.1" height="20.1"/>
+<rect x="281.8" y="201.4" class="st1" width="20.1" height="20.1"/>
+<rect x="261.7" y="221.6" class="st1" width="20.1" height="20.1"/>
+<rect x="241.5" y="241.7" class="st1" width="20.1" height="20.1"/>
+<rect x="221.4" y="261.9" class="st1" width="20.1" height="20.1"/>
+<rect x="201.3" y="261.9" class="st1" width="20.1" height="20.1"/>
+<rect x="161" y="282" class="st1" width="20.1" height="20.1"/>
+<rect x="161" y="302.1" class="st1" width="20.1" height="20.1"/>
+<rect x="181.1" y="282" class="st1" width="20.1" height="20.1"/>
+<rect x="140.8" y="282" class="st1" width="20.1" height="20.1"/>
+<rect x="120.7" y="282" class="st1" width="20.1" height="20.1"/>
+<rect x="100.5" y="282" class="st1" width="20.1" height="20.1"/>
+<rect x="80.4" y="282" class="st1" width="20.1" height="20.1"/>
+<rect x="60.3" y="282" class="st1" width="20.1" height="20.1"/>
+<rect x="121.4" y="302.1" class="st1" width="20.1" height="20.1"/>
+<rect x="101.3" y="302.1" class="st1" width="20.1" height="20.1"/>
+<rect x="60.3" y="302.1" class="st1" width="20.1" height="20.1"/>
+<rect x="60.3" y="261.9" class="st1" width="20.1" height="20.1"/>
+<rect x="40.1" y="261.9" class="st1" width="20.1" height="20.1"/>
+<rect x="20" y="241.7" class="st1" width="20.1" height="20.1"/>
+<rect x="0" y="221.6" class="st1" width="20.1" height="20.1"/>
+<rect x="0" y="201.5" class="st1" width="20.1" height="20.1"/>
+<rect x="0" y="181.3" class="st1" width="20.1" height="20.1"/>
+<rect x="0" y="161.2" class="st1" width="20.1" height="20.1"/>
+<rect x="20.1" y="141" class="st1" width="20.1" height="20.1"/>
+<rect x="40.3" y="141" class="st1" width="20.1" height="20.1"/>
+<rect x="0" y="120.9" class="st1" width="20.1" height="20.1"/>
+<rect x="20.1" y="100.7" class="st1" width="20.1" height="20.1"/>
+<rect x="20.1" y="80.6" class="st1" width="20.1" height="20.1"/>
+<rect x="80.5" y="120.9" class="st1" width="20.1" height="20.1"/>
+<rect x="80.5" y="100.7" class="st1" width="20.1" height="20.1"/>
+<rect x="221.4" y="221.6" class="st1" width="20.1" height="20.1"/>
+<rect x="221.4" y="201.4" class="st1" width="20.1" height="20.1"/>
+<rect x="221.4" y="181.3" class="st1" width="20.1" height="20.1"/>
+<rect x="201.3" y="181.3" class="st1" width="20.1" height="20.1"/>
+<rect x="201.3" y="221.6" class="st1" width="20.1" height="20.1"/>
+<rect x="181.1" y="221.6" class="st1" width="20.1" height="20.1"/>
+<rect x="161" y="221.6" class="st1" width="20.1" height="20.1"/>
+<rect x="140.8" y="221.6" class="st1" width="20.1" height="20.1"/>
+<rect x="120.7" y="200.8" class="st1" width="20.1" height="20.1"/>
+<rect x="20.1" y="120.9" class="st2" width="20.1" height="20.1"/>
+<rect x="40.1" y="120.9" class="st3" width="20.1" height="20.1"/>
+<rect x="60.3" y="60.4" class="st4" width="20.1" height="20.1"/>
+<rect x="80.5" y="40.3" class="st4" width="20.1" height="20.1"/>
+<rect x="100.5" y="20.1" class="st4" width="20.1" height="20.1"/>
+<rect x="100.5" y="40.3" class="st5" width="20.1" height="20.1"/>
+<rect x="120.7" y="20.1" class="st6" width="20.1" height="20.1"/>
+<rect x="120.7" y="40.3" class="st6" width="20.1" height="20.1"/>
+<rect x="80.5" y="60.4" class="st6" width="20.1" height="20.1"/>
+<rect x="100.5" y="40.3" class="st6" width="20.1" height="20.1"/>
+<rect x="80.8" y="302.1" class="st4" width="20.1" height="20.1"/>
+<rect x="141.2" y="302.1" class="st4" width="20.1" height="20.1"/>
+<rect x="161" y="261.9" class="st1" width="20.1" height="20.1"/>
+</svg>

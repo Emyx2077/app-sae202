@@ -19,6 +19,8 @@ function getRoomNb(){
 
             const data = JSON.parse(this.responseText);
 
+            console.log(data)
+
             //log la mouette
             if (data[201] !== undefined){
                 mouette.innerText = data[201]
@@ -28,7 +30,7 @@ function getRoomNb(){
 
             //log l'oie'
             if (data[9] !== undefined){
-            oie.innerText = data[9]
+                oie.innerText = data[9]
             } else {
                 oie.innerText = '0'
             }

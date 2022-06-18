@@ -5,7 +5,7 @@ $co = connexion();
 $req ="SELECT * FROM teams";
 
 
-echo '<div class="bg-light m-5 mt-5 p-5 border rounded mh-10 d-flex flex-column align-items-center" style="margin-top: 50px">';
+echo '<div class="bg-light p-5 border rounded mh-10 d-flex flex-column align-items-center" style="margin: 150px 100px 50px 100px">';
 
     echo '<h3>Toutes les teams</h3>';
 

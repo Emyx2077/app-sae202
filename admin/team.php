@@ -31,7 +31,7 @@ while($ligne = $resultatInprogress->fetch(PDO::FETCH_ASSOC)) {
 
 $inprogress = $resultatInprogress->rowCount();
 
-echo '<div class="bg-light m-5 p-5 border rounded mh-10 d-flex flex-column align-items-center" style="margin-top: 50px;">';
+echo '<div class="bg-light p-5 border rounded mh-10 d-flex flex-column align-items-center" style="margin: 150px 100px 50px 100px">';
     echo 'ID de la team : '.$resultat['teamId'].'<br>';
     echo 'Nom : '.$resultat['teamNom'].'<br>';
     echo 'Code : '.$resultat['teamCode'].'<br><br>';

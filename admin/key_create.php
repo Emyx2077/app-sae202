@@ -9,7 +9,7 @@ if (!empty($_SESSION['erreur'])) {
 
 ?>
 
-<div class="bg-light m-5 p-5 border rounded mh-10 d-flex flex-column align-items-center">
+<div class="bg-light p-5 border rounded mh-10 d-flex flex-column align-items-center" style="margin: 150px 100px 50px 100px">
     <h3>Clé actuel</h3>
 
 <form action="admin/encode.php" method="POST" class="w-50">

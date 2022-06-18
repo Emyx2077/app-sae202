@@ -140,13 +140,13 @@ function showUploads($mabd, $req) {
 
     $lignes_resultat = $resultat->rowCount();
     if ($lignes_resultat>0) {
-        echo '<table>'."\n";
-        echo '<thead><th>Nom Team</th><th>From</th><th>img</th></thead>';
+        echo '<table class="m-5">'."\n";
+        echo '<thead><th>Nom Team / </th><th>From / </th><th>img / </th></thead>';
         while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
             echo '<tr>';
             echo '<td>'.$ligne['teamNom'].'</td>';
             echo '<td>'.$ligne['uploadNom'].'</td>';
-            echo '<td><img src="../'.$ligne['uploadImg'].'" style="width: 100px;"></td>';
+            echo '<td><a href="'.$ligne['uploadImg'].'"><img src="'.$ligne['uploadImg'].'" style="width: 100px;"></a></td>';
             echo '</tr>';
         }
         echo '</table>'."\n";

@@ -75,8 +75,8 @@ table, td, th {
 }
 
 .text-piaf {
-  background: rgb(100, 106, 211);
-  background: linear-gradient(216deg, rgb(100, 106, 211) 0%, rgb(130, 53, 166) 77%);
+  background: rgb(125, 116, 191);
+  background: linear-gradient(200deg, rgb(125, 116, 191) 0%, rgb(90, 57, 96) 90%);
   border-radius: 20px;
 }
 
