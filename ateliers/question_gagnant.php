@@ -2,6 +2,8 @@
 
 $co = connexion();
 
+$teamCode = $_SESSION['teamCode'];
+
 $win = $_POST['win'];
 
 $req = 'SELECT uploadNom FROM upload WHERE uploadNom = "questionWin" AND uploadTeamCode = "'.$_SESSION['teamCode'].'"';
@@ -32,7 +34,7 @@ if ($win == "alan_turing"){
     }
 
     $_SESSION['question'] = 'Code valider !';
-
+    lvlup($co, $teamCode);
 } else {
     $_SESSION['question'] = 'Ce n\'est pas le bon code !';
 }

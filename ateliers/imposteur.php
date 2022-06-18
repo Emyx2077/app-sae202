@@ -1,6 +1,7 @@
 <?php require '../lib/lib.inc.php';
 
 $imposteur=mb_strtolower(sanitize($_POST['imposteur']));
+$teamCode = $_SESSION['teamCode'];
 
 $co=connexion();
 
@@ -19,6 +20,7 @@ if ($ligne == 0){
     $_SESSION['imposteur'] = "Mauvaise réponse !";
 } else {
     $_SESSION['imposteur'] = "Bonne réponse !";
+    lvlup($co, $teamCode);
 }
 
 deconnexion($co);

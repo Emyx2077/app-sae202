@@ -51,7 +51,7 @@ echo '</div>';
             unset ($_SESSION['question']);
         }
 
-        echo '<form action="question_gagnant.php" method="post">
+        echo '<form action="ateliers/question_gagnant.php" method="post">
                     <input class="form-control" max="999" placeholder="Si vous avez gagnez" type="text" name="win" required/><br>
                     <input type="submit" value="Envoyer" class="btn btn-primary float-end">
                 </form>';

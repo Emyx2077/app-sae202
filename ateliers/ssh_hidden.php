@@ -1,6 +1,7 @@
 <?php require'../head.php';
 
 $co = connexion();
+$teamCode = $_SESSION['teamCode'];
 
 $promo = $_POST['promo'];
 
@@ -32,7 +33,7 @@ $req = 'INSERT INTO upload (uploadNom, uploadTeamCode, uploadImg) VALUES ("sshHi
     }
 
     $_SESSION['promo'] = 'Code promo ajouté !';
-
+    lvlup($co, $teamCode);
 } else {
     $_SESSION['promo'] = 'Code promo invalide !';
 }

@@ -288,3 +288,14 @@ function uploadPic($co, $imageType, $from){
 
     deconnexion($co);
 }
+
+function lvlup($co, $teamCode){
+    $req = 'UPDATE teams SET teamLvl = teamLvl + 1 WHERE teamCode = "'.$teamCode.'";';
+
+    try {
+        $resultat=$co->query($req); // exécuter la requête
+    } catch (PDOException $e) {
+        print "Erreur : ".$e->getMessage().'<br />';
+        die();
+    }
+}
