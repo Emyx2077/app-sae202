@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="00dddc9f-a9a6-47a4-9827-01e00248ccef" name="vps" url="http://localhost/sae202/app-sae202/">
+        <fileTransfer rootFolder="/var/www/appsae202" accessType="SFTP" host="emily-saintetienne.ovh" port="22" sshConfigId="d201fe68-d029-4d65-8a27-97bebdea3b1b" sshConfig="mmi21d15@emily-saintetienne.ovh:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
