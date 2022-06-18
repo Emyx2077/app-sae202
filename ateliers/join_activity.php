@@ -8,7 +8,7 @@ $roomCode = sanitize($_POST['roomCode']);
 
 //remplacer le code salle par le principale si l'équipe rentre une secondaire, et enlever les 0
 
-if (($roomCode != '205') && ($roomCode != '201')) {
+if (($roomCode != '205') && ($roomCode != '201') && ($roomCode != '18')) {
     $roomCode = str_replace(0, '', $roomCode);
     $roomCode = str_replace(6, 9, $roomCode);
     $roomCode = str_replace(5, 9, $roomCode);

@@ -10,12 +10,12 @@ if (empty($teamCode)){
     die();
 }
 
-echo '<h1 class="text-center text-white" style="margin: 100px 0px 50px 0px">Bienvenue dans le royaume de la Poule</h1>';
+echo '<h1 class="text-center text-white" style="margin: 100px 0px 50px 0px">La quete de la clé</h1>';
 
 echo '<div class="d-flex flex-column align-items-center">';
 
 
-        echo '<div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">
+echo '<div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">
         <h3 class="mb-4 text-center text-black">Code de la salle</h3>';
 
 echo '<p class="text-center"><span id="joinStatus" class=""></span></p>';
@@ -43,11 +43,10 @@ echo '</div>';
 
 
     <!--Valider l'indice-->
-    <div class="bg-light m-5 mt-5 p-5 border rounded mh-10" style="max-width: 350px; height : 250px;">
-        <h3 class="mb-4 text-center text-black">Valider l'indice</h3>
+    <div class="bg-light m-5 mt-5 p-5 border rounded mh-10" style="max-width: 350px; height : 180px;">
+        <h3 class="mb-4 text-center text-black">Finir l'activité</h3>
 
-        <form action="../profil/is_valid.php" method="post">
-            <input class="form-control" placeholder="Valider un indice" type="text" name="indice" required /><br>
+        <form action="ateliers/quete_found.php" method="post">
             <input type="submit" value="Envoyer" class="float-end btn btn-primary">
         </form>
 

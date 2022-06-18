@@ -3,7 +3,7 @@ const mouette = document.getElementById("mouette");
 const oie = document.getElementById("oie");
 const pintade = document.getElementById("pintade");
 const poule = document.getElementById("poule");
-
+const quete = document.getElementById("quete");
 
 getRoomNb()
 
@@ -19,7 +19,7 @@ function getRoomNb(){
 
             const data = JSON.parse(this.responseText);
 
-            console.log(data)
+            console.log(this.responseText)
 
             //log la mouette
             if (data[201] !== undefined){
@@ -54,6 +54,13 @@ function getRoomNb(){
                 poule.innerText = data[7]
             } else {
                 poule.innerText = '0'
+            }
+
+            //log de la quete
+            if (data[18] !== undefined){
+                quete.innerText = data[18]
+            } else {
+                quete.innerText = '0'
             }
 
         }else if(this.readyState === 4){

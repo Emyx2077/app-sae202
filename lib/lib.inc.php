@@ -264,7 +264,6 @@ function uploadPic($co, $imageType, $from){
 
     $newImg = "../profil/img/".date("Y_m_d_H_i_s")."---".$_FILES["pic"]["name"];
     $path = "profil/img/".date("Y_m_d_H_i_s")."---".$_FILES["pic"]["name"];
-    //$path .= $newImg;
 
     if(is_uploaded_file($_FILES["pic"]["tmp_name"])) {
         if(!move_uploaded_file($_FILES["pic"]["tmp_name"], $newImg)) {
@@ -277,8 +276,6 @@ function uploadPic($co, $imageType, $from){
     }
 
 //req pour ajouter a la table
-
-    $_SESSION['picPath'] = $newImg;
 
     $req = 'INSERT INTO upload (uploadNom, uploadTeamCode, uploadImg) VALUES ("'.$from.'", "'.$_SESSION['teamCode'].'", "'.$path.'");';
 

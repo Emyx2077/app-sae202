@@ -44,23 +44,23 @@ table, td, th {
     transform: translateY(5px);
   }
 }
-#mouette {
+#mouetteCss {
   animation-duration: 3500ms;
 }
 
-#poulet {
+#pouletCss {
   animation-duration: 4800ms;
 }
 
-#pintade {
+#pintadeCss {
   animation-duration: 6000ms;
 }
 
-#pinguin {
+#pinguinCss {
   animation-duration: 3000ms;
 }
 
-#oie {
+#oieCss {
   animation-duration: 4200ms;
 }
 
