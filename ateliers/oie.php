@@ -4,6 +4,12 @@ require'../head.php';
 $co = connexion();
 $teamCode = $_SESSION['teamCode'];
 
+if (empty($teamCode)){
+    header('location:../board.php');
+    $_SESSION['board'] = "Vous devez être connecté pour faire cette action";
+    die();
+}
+
 echo '<h1 class="text-center text-white mt-4">Bienvenue dans le royaume de l\'Oie</h1>';
 
 echo '<div class="d-flex flex-column align-items-center">
