@@ -9,11 +9,12 @@ if (!empty($_SESSION['userId'])){
 
 echo '<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';
 if (empty($_SESSION['teamCode'])){
-    echo '<li><a class="dropdown-item" href="team.php">Create team</a></li>';
+    echo '<li><a class="dropdown-item" href="team.php">Créer ta team</a></li>';
     echo '<li><a class="dropdown-item" href="join_team.php">Join une team</a></li><hr>';
     echo '<li><a class="dropdown-item" href="deconnexion.php">Déconnexion</a></li>';
 } else {
     echo '<li><a class="dropdown-item" href="profil/team_profil.php">'.ucfirst($_SESSION['teamNom']).' # '.$_SESSION['teamCode'].'</a><hr>';
+    echo '<li><a class="dropdown-item" href="team.php">Créer ta team</a></li>';
     echo '<li><a class="dropdown-item" href="join_team.php">Change de team</a></li><hr>';
     echo '<li><a class="dropdown-item" href="deconnexion.php">Déconnexion</a></li>';
 }

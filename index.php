@@ -31,7 +31,7 @@ if (!empty($_SESSION['userId'])){
 
         <form action="login_verif.php" method="post">
             <input class="form-control" placeholder="Ton Email" type="email" name="mail" required/><br>
-            <input class="form-control" placeholder="Ton code étudiant" type="text" name="password" required/><br>
+            <input class="form-control" placeholder="Ton code étudiant" type="password" name="password" required/><br>
             <input type="submit" value="Se connecter" class="btn btn-primary float-end">
         </form>
 

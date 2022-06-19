@@ -14,6 +14,7 @@ echo '<h1 class="text-center text-white" style="margin: 100px 0px 50px 0px">Bien
 
 echo '<div class="d-flex flex-column align-items-center">';
 
+            //join la salle
         echo '<div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">
         <h3 class="mb-4 text-center text-black">Code de la salle</h3>';
 
@@ -41,14 +42,15 @@ echo '</div>';
         </p>
     </div>
 
-        <div class="bg-light mt-5 m-2 p-5 border rounded w-25" style="min-width: 400px; max-height: 390px">
+        <!--upload portrait robot-->
+        <div class="bg-light mt-5 m-2 p-5 border rounded w-25 d-flex flex-column align-items-center" style="min-width: 300px; max-height: 390px">
 
             <?php
             $path = showRobotImg($co);
 
             if (!empty($path)) {
                 echo '<h3 class="text-center">Votre Portrait robot</h3><br>';
-                echo '<a href="'.$path.'"><img class="img-thumbnail" style="width :200px" src="'.$path.'"></a>';
+                echo '<a href="'.$path.'"><img class="img-thumbnail p-2" style="width :200px" src="'.$path.'"></a>';
 
                 $req = 'SELECT hashHint from hash WHERE hashRoomCode=9;';
 
@@ -61,7 +63,7 @@ echo '</div>';
 
                 $resultat = $resultat->fetch(PDO::FETCH_ASSOC);
 
-                echo '<br><br><p class="text-center">Indice : '.$resultat['hashHint'].'</p>';
+                echo '<p class="text-center">Indice : <span class="text-success">'.$resultat['hashHint'].'</span></p>';
 
             } else {
                 echo '<form action="ateliers/portrait.php" method="post" enctype="multipart/form-data">
@@ -76,7 +78,9 @@ echo '</div>';
 
         </div>
 
-        <div class="bg-light m-5 mt-5 p-5 border rounded mh-10" style="max-width: 350px; height : 280px;">
+
+        <!--valider imposteur-->
+        <div class="bg-light m-5 mt-5 p-5 border rounded mh-10" style="max-width: 350px; max-height : 280px;">
             <h3 class="mb-4 text-center text-black">Imposteur</h3>
 
             <?php

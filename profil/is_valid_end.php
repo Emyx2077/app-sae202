@@ -12,6 +12,8 @@ $dec_data = base64_decode($dec_data);
 
 $_SESSION['uncode'] = $dec_data;
 
+$_SESSION['uncodeStat'] = 'Clé incomplete ou phrase erroné';
+
 echo $_SESSION['uncode'];
 header('location:team_profil.php');
 
