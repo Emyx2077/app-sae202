@@ -21,7 +21,7 @@
     <br>
     <a class="btn btn-primary m-2 btn-lg" href="admin/room.php">Les salles</a>
     <br>
-    <a class="btn btn-primary m-2 btn-lg" href="admin/leaderboard.php">Leaderboard</a>
+    <a class="btn btn-primary m-2 btn-lg" href="admin/leader.php">Leaderboard</a>
 </div>
 
 <?php require '../end.php'; ?>
