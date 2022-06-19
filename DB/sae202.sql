@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 17, 2022 at 07:56 PM
+-- Generation Time: Jun 19, 2022 at 11:17 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.26
 
@@ -135,7 +135,7 @@ CREATE TABLE `teams` (
 
 CREATE TABLE `time` (
   `timeId` int(11) NOT NULL,
-  `timeTeamId` int(11) NOT NULL,
+  `timeTeamCode` int(11) NOT NULL,
   `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -239,13 +239,13 @@ ALTER TABLE `hash`
 -- AUTO_INCREMENT for table `hashAccess`
 --
 ALTER TABLE `hashAccess`
-  MODIFY `hashAccessId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `hashAccessId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `inprogress`
 --
 ALTER TABLE `inprogress`
-  MODIFY `inprogressId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
+  MODIFY `inprogressId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=269;
 
 --
 -- AUTO_INCREMENT for table `room`
@@ -263,25 +263,25 @@ ALTER TABLE `suspect`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `teamId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `teamId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `time`
 --
 ALTER TABLE `time`
-  MODIFY `timeId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+  MODIFY `timeId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT for table `upload`
 --
 ALTER TABLE `upload`
-  MODIFY `uploadId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `uploadId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `userId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
