@@ -6,7 +6,7 @@ $teamCode = $_SESSION['teamCode'];
 
 if (empty($teamCode)){
     header('location:../board.php');
-    $_SESSION['board'] = "Vous devez être connecté pour faire cette action";
+    $_SESSION['board'] = "Vous devez avoir une team pour faire cette action";
     die();
 }
 
