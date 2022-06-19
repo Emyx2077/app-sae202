@@ -20,7 +20,7 @@ try {
 <div class="d-flex justify-content-center flex-wrap mt-5">
 
     <div class="bg-light mt-5 m-2 p-5 border rounded w-25 d-flex flex-column align-items-center" style="min-width: 300px; max-height: 350px">
-
+        <h3 class="text-center">Votre photo d'équipe</h3><br>
         <?php
         //photo du groupe
         //si une photo a déjà été up on la montre, sinon on affiche le form pour en up une
@@ -28,7 +28,7 @@ try {
         $path = showTeamImg($co);
 
         if (!empty($path)) {
-            echo '<h3 class="text-center">Votre photo d\'équipe</h3><br>';
+            //echo '<h3 class="text-center">Votre photo d\'équipe</h3><br>';
             echo '<a href="'.$path.'"><img class="img-thumbnail p-2" style="width :200px" src="'.$path.'"></a>';
         } else {
 
@@ -40,7 +40,6 @@ try {
             ?>
 
             <form action="profil/photo.php" method="post" enctype="multipart/form-data">
-                <h3>La photo de votre groupe</h3><br>
                 <div class="input-group mb-3 w-100">
                     <input type="file" class="form-control" id="inputGroupFile02" name="pic" required>
                 </div>
@@ -50,7 +49,7 @@ try {
     </div>
 
     <!--ajouter un indice-->
-    <div class="bg-light m-2 mt-5 p-5 border rounded mh-10" style="min-width: 400px">
+    <div class="bg-light m-2 mt-5 p-5 border rounded mh-10" style="min-width: 350px">
         <h3 class="mb-4 text-center">Ajoute un indice</h3>
 
         <?php

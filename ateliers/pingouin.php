@@ -43,7 +43,7 @@ echo '</div>';
     </div>
 
     <!--input mot caché ssh-->
-    <div class="bg-light m-5 mt-5 p-5 border rounded w-75 p-4 m-5" style="margin-top: 0px; max-width: 550px">
+    <div class="bg-light m-5 mt-5 p-5 border rounded w-75" style="margin-top: 0px; max-width: 550px">
         <h3 class="mb-4 text-center text-black">Black Friday</h3>
     <?php
     if (!empty($_SESSION['promo'])) {
@@ -60,7 +60,7 @@ echo '</div>';
 
 
     <!--Valider l'indice-->
-    <div class="bg-light m-5 mt-5 p-5 border rounded mh-10" style="max-width: 350px; height : 250px;">
+    <div class="bg-light mb-5 p-5 border rounded" style="max-width: 350px; height : 250px;">
         <h3 class="mb-4 text-center text-black">Valider l'indice</h3>
 
         <form action="profil/is_valid.php" method="post">
