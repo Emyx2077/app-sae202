@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 19, 2022 at 11:17 AM
+-- Generation Time: Jun 21, 2022 at 11:54 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.26
 
@@ -39,11 +39,11 @@ CREATE TABLE `hash` (
 --
 
 INSERT INTO `hash` (`hashId`, `hashKey`, `hashRoomCode`, `hashHint`) VALUES
-(127, 'gvFpaYnl3PqWC', '17', 'anatidae'),
-(128, 'Bj1ddteRfpci0', '201', 'belisama'),
-(129, 'dWEj9aBLyygUc', '205', 'linustorvald'),
-(130, 'erarBICtEkvVO', '9', 'macintoshplus'),
-(131, 'UhxhmxrArvqR', '7', 'nuggies');
+(132, '4Wkis+VDxKwoq5XPrEjgYJ/iFS', '17', 'anatidae'),
+(133, 'gsiVc63Z762XppTXtTImtfhHjd', '201', 'belisama'),
+(134, 'Sr6k4keZKA/42KyUfSiYgbBF1C', '205', 'linustorvald'),
+(135, 'ExEXFuzPfT5rgEpzF7o8nClBrZ', '9', 'macintoshplus'),
+(136, 's0RKW+KE/hISuZIOkwFK5slo', '7', 'nuggies');
 
 -- --------------------------------------------------------
 
@@ -233,19 +233,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `hash`
 --
 ALTER TABLE `hash`
-  MODIFY `hashId` int(99) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `hashId` int(99) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT for table `hashAccess`
 --
 ALTER TABLE `hashAccess`
-  MODIFY `hashAccessId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `hashAccessId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `inprogress`
 --
 ALTER TABLE `inprogress`
-  MODIFY `inprogressId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=269;
+  MODIFY `inprogressId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=279;
 
 --
 -- AUTO_INCREMENT for table `room`
@@ -263,13 +263,13 @@ ALTER TABLE `suspect`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `teamId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `teamId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `time`
 --
 ALTER TABLE `time`
-  MODIFY `timeId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `timeId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
 
 --
 -- AUTO_INCREMENT for table `upload`
@@ -281,7 +281,7 @@ ALTER TABLE `upload`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `userId` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

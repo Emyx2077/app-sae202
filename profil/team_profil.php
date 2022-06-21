@@ -84,7 +84,7 @@ try {
 
 
     <!--déchiffrement final-->
-    <div class="bg-light m-2 mt-5 p-5 border rounded mh-10" style="width: 400px; max-height: 440px;">
+    <div class="bg-light m-2 mt-5 p-5 border rounded mh-10" style="width: 400px; max-height: 520px;">
         <h3 class="mb-4 text-center">Déchiffrement final</h3>
 
         <?php

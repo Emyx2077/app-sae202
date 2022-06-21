@@ -18,6 +18,7 @@ echo '<h3>Les Salles</h3>';
             echo '<input class="form-control" type="text" name="location'.$i.'" required/><br>';
             echo 'indice (clé donné a la fin d\'une activité)<br>';
             echo '<input class="form-control" type="text" name="hint'.$i.'" required/><br><br>';
+            echo '<hr>';
         }
 
         echo '<input type="submit" value="Envoyer" class="btn btn-primary float-end">';
