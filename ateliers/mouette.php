@@ -38,7 +38,7 @@ echo '<div class="d-flex flex-column align-items-center">';
             et en plus de ça, plus moyen de s’entendre penser avec tout ce raffut !<br>
             comment d’aussi petites créatures peuvent être à ce point énervantes…<br><br>
 
-            Par chance elles essayent de vous aider et vous conseil d’explorer ce site <a href="">[liens vers le wikipaouf]</a><br>
+            Par chance elles essayent de vous aider et vous conseil d’explorer ce site <a href="ateliers/ressources/mouette">[WIKIPAOUF]</a><br>
             une autre mouette au loin semble vous conseiller d’utiliser l’approche F12, mais… qu’est-ce que ça veut dire?<br>
 
         </p>

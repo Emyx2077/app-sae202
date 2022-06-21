@@ -31,7 +31,7 @@ echo '</div>';
     <div class="textAtelier rounded">
         <p>
             <h3>Les secrets du poulailler</h3>
-            Mais que font toutes ces poules ici, AH ! Mais c’est un poulailler <a href="">[liens]</a><br>
+            Mais que font toutes ces poules ici, AH ! Mais c’est un <a href="ateliers/ressources/poule">[poulailler]</a><br>
             Vous allez devoir prendre votre meilleur chapeau de paille et votre bonne vieille fourche, c’est l’heure d’aller réveiller le poulailler, il vous faut absolument cet indice !<br>
             Vous allez devoir à l'aide de CSS explorer et trouver les secrets dont regorge le poulailler.<br>
 

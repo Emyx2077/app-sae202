@@ -36,7 +36,7 @@ echo '</div>';
             Mais où est encore passé ce maudit pingouin, a tous les coups il est encore partie se cacher au beau milieu de son serveur<br>
             Pas de chance pour vous, quelqu’un va devoir aller le chercher si vous voulez retrouver l’indice qu’il possède<br>
             Par chance il a laissé certaines de ses affaires traîner avant de disparaître, vous devriez y jeter un coup d’oeil !
-            <a href="">[tuto ssh]</a>
+            <a href="ateliers/ressources/le_ssh_pour_les_nuls.txt">[tuto ssh]</a>
 
         </p>
     </div>

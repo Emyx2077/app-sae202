@@ -38,7 +38,7 @@ echo '</div>';
 
             Pour cela vous avez à disposition en h009 mais également en h005 et h006 des ordinateurs avec photoshop et illustrator, ou encore du papier.
             Au vue des conditions exceptionnelles, la cour royale vous met à disposition des ressources non négligeable pour vous aider dans votre quête
-            <a href="">[liens pdf tuto et psd]</a><br><br>
+            <a href="ateliers/ressources/tuto_ps.pdf">[tuto]</a> et <a href="ateliers/ressources/crime.psd">[psd]</a><br><br>
             Une fois complétée, uploadez votre création via le champ dédié ci-dessous, la cour saura vous recompenser dument pour votre service rendu !<br>
 
             …<br>

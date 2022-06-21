@@ -1,0 +1,22 @@
+Vous allez devoir a présent parcourir ce serveur a l'aide de votre invité de commande, a la recherche du manchot... ou peut-être bien du pingouin... attendez c'est lequel déjà...
+
+
+//Quelques commandes qui vous seront utiles//
+
+ssh NOM_D'UTILISATEUR@NOM_DU_DOMAINE >> vous permettra de vous connectez au serveur
+
+Le mot de passe est : PASSWORD  >> n'ayez pas peur c'est normal si rien ne s'affiche lorsque vous rentrez le mot de passe dans le terminal
+
+ls >> vous permettra d'afficher une liste des noms de tous les fichiers du répertoire de travail actuel
+
+cd LE_NOM_DU_REPERTOIRE >> vous permettra de changer de répertoire
+cd ../ >> vous permettra de revenir un répertoire en arrière 
+cd / >> vous permettra de revenir a la racine du serveur
+nano LE_NOM_DU_FICHIER >> vous permettra d'ouvrir un fichier texte avec un éditeur
+
+CTRL + X >> permettra de fermer un fichier texte
+
+Ctrl + C >> permet d'arrêter un programme qui s'exécute
+
+//tips//
+En appuyant sur la touche "tabulation" de votre clavier, cela permet de vous affichez des proposition ou d'auto completer la commande ou le nom que vous êtes entrain d'écrire

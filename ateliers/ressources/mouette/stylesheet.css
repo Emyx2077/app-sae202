@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+
+:root {
+    --lightblue: lightblue;
+    --link: #39adff;
+}
+
+body {
+    margin: 0 100px 0 100px;
+}
+
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 7px 4px -5px lightgray;
+}
+
+header img {
+    height: 50px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+.flex-section {
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.article-flex {
+    width: 60%;
+}
+
+.article-flex h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.article-flex p {
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.aside-flex {
+    width: 40%;
+    border: 1px solid black;
+}
+
+.aside-flex > h2{
+    height: 50px;
+    margin: 5px;
+    font-size: 1.3rem;
+    background-color: var(--lightblue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside-flex ul {
+    margin: 20px 5px 20px 25px;
+    line-height: 2;
+}
+
+.img-container {
+    margin: auto auto 30px auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.img-container > div {
+    height: 150px;
+    width: 150px;
+    background-color: black;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.img-container > div img {
+    height: 150px;
+    margin-left: -90px;
+}
+
+.img-container div:nth-child(3) img {
+    height: 220px;
+    margin: 0 0 0 -30px;
+}
+
+.img-container div:nth-child(4) img {
+    height: 150px;
+    margin: 0 0 0 -20px;
+}
+
+i {
+    font-size: 1.2rem;
+}
+
+.blue {
+    color: var(--link);
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+perdu {
+    visibility: hidden;
+    position: absolute;
+}
+
+ici {
+    font-size: 1.2rem;
+}
