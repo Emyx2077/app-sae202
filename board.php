@@ -19,7 +19,7 @@ if (!empty($_SESSION['board'])){
             <div class="text-white text-center p-5 text-piaf">
                 <h5>Royaume de la mouette</h5>
                 <img class="my-3" id="mouetteCss" src="img/mouette.svg" alt="mouette">
-                <p><span id="mouette"></span> / 5</p>
+                <p class="count"><span id="mouette"></span> / 5</p>
             </div>
         </a>
     </div>
@@ -29,7 +29,7 @@ if (!empty($_SESSION['board'])){
             <div class="text-white text-center p-5 text-piaf">
                 <h5>Royaume de l'oie</h5>
                 <img class="my-3" id="oieCss" src="img/oie.svg" alt="oie">
-                <p><span id="oie"></span> / 5</p>
+                <p class="count"><span id="oie"></span> / 5</p>
             </div>
         </a>
     </div>
@@ -39,7 +39,7 @@ if (!empty($_SESSION['board'])){
             <div class="text-white text-center p-5 text-piaf">
                 <h5>Royaume du pingouin</h5>
                 <img class="my-3" id="pinguinCss" src="img/pinguin.svg" alt="pinguin">
-                <p><span id="pingouin"></span> / 5</p>
+                <p class="count"><span id="pingouin"></span> / 5</p>
             </div>
         </a>
     </div>
@@ -49,7 +49,7 @@ if (!empty($_SESSION['board'])){
             <div class="text-white text-center p-5 text-piaf">
                 <h5>Royaume de la pintade</h5>
                 <img class="my-3" id="pintadeCss" src="img/pintade.svg" alt="pintade">
-                <p><span id="pintade"></span> / 5</p>
+                <p class="count"><span id="pintade"></span> / 6</p>
             </div>
         </a>
     </div>
@@ -59,7 +59,7 @@ if (!empty($_SESSION['board'])){
             <div class="text-white text-center p-5 text-piaf">
                 <h5>Royaume de la poule</h5>
                 <img class="my-3" id="pouleCss" src="img/poule.svg" alt="poule">
-                <p><span id="poule"></span> / 5</p>
+                <p class="count"><span id="poule"></span> / 5</p>
             </div>
         </a>
     </div>
@@ -68,7 +68,7 @@ if (!empty($_SESSION['board'])){
         <a class="text-decoration-none" href="ateliers/quete_cle.php">
             <div class="text-white text-center p-4 text-piaf">
                 <h5>La quête de la clé</h5>
-                <p><span id="quete"></span> / 4</p>
+                <p class="count"><span id="quete"></span> / 4</p>
             </div>
         </a>
     </div>

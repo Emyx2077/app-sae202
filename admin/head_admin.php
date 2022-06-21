@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Alamar</title>
+    <title>Alamare</title>
     <meta charset="utf-8">
     <base href="/sae202/app-sae202/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
