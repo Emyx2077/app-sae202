@@ -31,14 +31,13 @@ echo '</div>';
 
     <div class="textAtelier rounded">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea esse labore laboriosam
-            obcaecati omnis saepe, vitae? A consequuntur, culpa enim eum iste magnam nostrum quasi
-            quis quos sint suscipit tenetur velit vero, voluptate voluptates? Culpa facere fugit incidunt
-            iure minus non odio rerum tempora! Consectetur possimus, tempora! Ab corporis debitis,
-            dolore dolores ea eaque, in ipsam ipsum quas, quasi saepe sequi? Dolore libero nisi
-            ratione reiciendis vel velit veritatis! A ad adipisci aperiam aspernatur atque blanditiis
-            cumque cupiditate dolor expedita explicabo iusto laboriosam maiores modi nam nesciunt
-            nostrum omnis quam quidem quo repellat sint tempora, totam voluptas! Explicabo, ipsa, reiciendis!
+            <h3>La chasse du pingouin</h3>
+
+            Mais où est encore passé ce maudit pingouin, a tous les coups il est encore partie se cacher au beau milieu de son serveur<br>
+            Pas de chance pour vous, quelqu’un va devoir aller le chercher si vous voulez retrouver l’indice qu’il possède<br>
+            Par chance il a laissé certaines de ses affaires traîner avant de disparaître, vous devriez y jeter un coup d’oeil !
+            <a href="">[tuto ssh]</a>
+
         </p>
     </div>
 

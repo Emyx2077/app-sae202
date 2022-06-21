@@ -30,14 +30,13 @@ echo '</div>';
 
     <div class="textAtelier rounded">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea esse labore laboriosam
-            obcaecati omnis saepe, vitae? A consequuntur, culpa enim eum iste magnam nostrum quasi
-            quis quos sint suscipit tenetur velit vero, voluptate voluptates? Culpa facere fugit incidunt
-            iure minus non odio rerum tempora! Consectetur possimus, tempora! Ab corporis debitis,
-            dolore dolores ea eaque, in ipsam ipsum quas, quasi saepe sequi? Dolore libero nisi
-            ratione reiciendis vel velit veritatis! A ad adipisci aperiam aspernatur atque blanditiis
-            cumque cupiditate dolor expedita explicabo iusto laboriosam maiores modi nam nesciunt
-            nostrum omnis quam quidem quo repellat sint tempora, totam voluptas! Explicabo, ipsa, reiciendis!
+            <h3>Les secrets du poulailler</h3>
+            Mais que font toutes ces poules ici, AH ! Mais c’est un poulailler <a href="">[liens]</a><br>
+            Vous allez devoir prendre votre meilleur chapeau de paille et votre bonne vieille fourche, c’est l’heure d’aller réveiller le poulailler, il vous faut absolument cet indice !<br>
+            Vous allez devoir à l'aide de CSS explorer et trouver les secrets dont regorge le poulailler.<br>
+
+            <br><i>Vous pouvez également en salle 008, c'est juste a côté</i>
+
         </p>
     </div>
 

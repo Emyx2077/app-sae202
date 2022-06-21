@@ -30,14 +30,15 @@ echo '</div>';
 
     <div class="textAtelier rounded">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea esse labore laboriosam
-            obcaecati omnis saepe, vitae? A consequuntur, culpa enim eum iste magnam nostrum quasi
-            quis quos sint suscipit tenetur velit vero, voluptate voluptates? Culpa facere fugit incidunt
-            iure minus non odio rerum tempora! Consectetur possimus, tempora! Ab corporis debitis,
-            dolore dolores ea eaque, in ipsam ipsum quas, quasi saepe sequi? Dolore libero nisi
-            ratione reiciendis vel velit veritatis! A ad adipisci aperiam aspernatur atque blanditiis
-            cumque cupiditate dolor expedita explicabo iusto laboriosam maiores modi nam nesciunt
-            nostrum omnis quam quidem quo repellat sint tempora, totam voluptas! Explicabo, ipsa, reiciendis!
+            <h3>La quête de la clé</h3>
+
+            Les conspirateurs tenaient vraiment à bien cacher la localisation du prince, vous ne pensiez quand même pas que cela serait si facile de trouver sa localisation.<br>
+            Il va vous falloir une clé de déchiffrement afin de pouvoir déchiffrer les bouts de code obtenue avec les indices.<br><br>
+            Il est donc l’heure de partir à chasse au trésor.<br>
+            Vous trouverez sur une table une carte au trésor, prenez en une et partez à l'aventure !<br>
+
+            <br><i>Code salle : 18</i>
+
         </p>
     </div>
 

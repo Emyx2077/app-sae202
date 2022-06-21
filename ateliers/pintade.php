@@ -31,14 +31,16 @@ echo '</div>';
 
     <div class="textAtelier rounded">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea esse labore laboriosam
-            obcaecati omnis saepe, vitae? A consequuntur, culpa enim eum iste magnam nostrum quasi
-            quis quos sint suscipit tenetur velit vero, voluptate voluptates? Culpa facere fugit incidunt
-            iure minus non odio rerum tempora! Consectetur possimus, tempora! Ab corporis debitis,
-            dolore dolores ea eaque, in ipsam ipsum quas, quasi saepe sequi? Dolore libero nisi
-            ratione reiciendis vel velit veritatis! A ad adipisci aperiam aspernatur atque blanditiis
-            cumque cupiditate dolor expedita explicabo iusto laboriosam maiores modi nam nesciunt
-            nostrum omnis quam quidem quo repellat sint tempora, totam voluptas! Explicabo, ipsa, reiciendis!
+            <h3>Question pour un caneton</h3>
+
+            Vous arrivez dans cette étrange salle, quand tout à coup une étrange créature à plume arrive en hurlant<br>
+            <strong>“Attention, il est bientôt l’heure pour notre grand quiz de culture général MMI-esque”</strong><br><br>
+
+            Vous allez devoir ici affronter une autre équipe dans un quiz, installez-vous et suivez les directives des animateurs !<br><br>
+
+            Pas de panique, tous les participants recevront l’indice pour la clé.<br>
+            Cependant l’équipe qui ressortira vainqueur se verra remettre un code bonus lui rapportant des points supplémentaires.<br>
+
         </p>
     </div>
 

@@ -31,14 +31,27 @@ echo '</div>';
 
     <div class="textAtelier rounded">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea esse labore laboriosam
-            obcaecati omnis saepe, vitae? A consequuntur, culpa enim eum iste magnam nostrum quasi
-            quis quos sint suscipit tenetur velit vero, voluptate voluptates? Culpa facere fugit incidunt
-            iure minus non odio rerum tempora! Consectetur possimus, tempora! Ab corporis debitis,
-            dolore dolores ea eaque, in ipsam ipsum quas, quasi saepe sequi? Dolore libero nisi
-            ratione reiciendis vel velit veritatis! A ad adipisci aperiam aspernatur atque blanditiis
-            cumque cupiditate dolor expedita explicabo iusto laboriosam maiores modi nam nesciunt
-            nostrum omnis quam quidem quo repellat sint tempora, totam voluptas! Explicabo, ipsa, reiciendis!
+            <h3>Scène de crime</h3>
+
+            Le conseiller du prince a été assassiné !<br>
+            Vous êtes chargé de dresser un portrait robot à l’aide des récits de divers témoins et des éventuels indices présents dans la salle.<br><br>
+
+            Pour cela vous avez à disposition en h009 mais également en h005 et h006 des ordinateurs avec photoshop et illustrator, ou encore du papier.
+            Au vue des conditions exceptionnelles, la cour royale vous met à disposition des ressources non négligeable pour vous aider dans votre quête
+            <a href="">[liens pdf tuto et psd]</a><br><br>
+            Une fois complétée, uploadez votre création via le champ dédié ci-dessous, la cour saura vous recompenser dument pour votre service rendu !<br>
+
+            …<br>
+            …<br>
+            …<br><br>
+
+            <strong>Quand l’imposteur est suspect</strong><br><br>
+
+            Vous trouvez en h009 un moniteur d’ordinateur affichant une drôle d’image.<br>
+            Un imposteur se trouve parmi ces personnes, saurez vous le reconnaître ?<br>
+            Une fois que vous pensez avoir trouver, entrer son identité dans le champ correspondant ci-dessous.<br>
+            Attention vous n’avez le droit qu'à un seul essai !<br>
+
         </p>
     </div>
 

@@ -31,14 +31,16 @@ echo '<div class="d-flex flex-column align-items-center">';
 
     <div class="textAtelier rounded">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea esse labore laboriosam
-            obcaecati omnis saepe, vitae? A consequuntur, culpa enim eum iste magnam nostrum quasi
-            quis quos sint suscipit tenetur velit vero, voluptate voluptates? Culpa facere fugit incidunt
-            iure minus non odio rerum tempora! Consectetur possimus, tempora! Ab corporis debitis,
-            dolore dolores ea eaque, in ipsam ipsum quas, quasi saepe sequi? Dolore libero nisi
-            ratione reiciendis vel velit veritatis! A ad adipisci aperiam aspernatur atque blanditiis
-            cumque cupiditate dolor expedita explicabo iusto laboriosam maiores modi nam nesciunt
-            nostrum omnis quam quidem quo repellat sint tempora, totam voluptas! Explicabo, ipsa, reiciendis!
+            <h3>Les nuisances</h3>
+
+            Vous étiez pourtant sûrs de ne pas rencontrer de difficultés avec les mouettes, elles ne prêtent que peu d’importance à toute cette histoire.<br>
+            Malheureusement pour vous les mouettes ont perdu l’indice en leurs possessions lors de leur retour de normandie.<br>
+            et en plus de ça, plus moyen de s’entendre penser avec tout ce raffut !<br>
+            comment d’aussi petites créatures peuvent être à ce point énervantes…<br><br>
+
+            Par chance elles essayent de vous aider et vous conseil d’explorer ce site <a href="">[liens vers le wikipaouf]</a><br>
+            une autre mouette au loin semble vous conseiller d’utiliser l’approche F12, mais… qu’est-ce que ça veut dire?<br>
+
         </p>
     </div>
 
